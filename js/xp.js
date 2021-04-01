@@ -29,10 +29,10 @@ function populateSummary() {
     "<br/>" +
     numberWithCommas(Math.ceil(totalPerLevel[100]/daysRemaining)) + " XP/day" +
     "</p>");
-    $("#215card .card-body").append("<p class=\"card-text\">" +
-    numberWithCommas(totalPerLevel[215]) + " Total XP Required" +
+    $("#225card .card-body").append("<p class=\"card-text\">" +
+    numberWithCommas(totalPerLevel[225]) + " Total XP Required" +
     "<br/>" +
-    numberWithCommas(Math.ceil(totalPerLevel[215]/daysRemaining)) + " XP/day" +
+    numberWithCommas(Math.ceil(totalPerLevel[225]/daysRemaining)) + " XP/day" +
     "</p>");
 
 }
@@ -53,7 +53,7 @@ function populateXpTable() {
 
 
 var days100Data = [];
-var days215Data = [];
+var days225Data = [];
 var daysDateData = [];
 function populateDaysTable() {
 
@@ -61,20 +61,20 @@ function populateDaysTable() {
 
   var day;
   var xp100PerDay = totalPerLevel[100]/daysTotal;
-  var xp215PerDay = totalPerLevel[215]/daysTotal;
+  var xp225PerDay = totalPerLevel[225]/daysTotal;
   var levelTo100 = 2;
-  var levelTo215 = 2;
+  var levelTo225 = 2;
   for (day=1; day <= daysTotal; day++) {
     var xp100Target = xp100PerDay * day;
     while (totalPerLevel[levelTo100] < xp100Target) {
       levelTo100++;
     }
     days100Data.push(levelTo100);
-    var xp215Target = xp215PerDay * day;
-    while (totalPerLevel[levelTo215] < xp215Target) {
-      levelTo215++;
+    var xp225Target = xp225PerDay * day;
+    while (totalPerLevel[levelTo225] < xp225Target) {
+      levelTo225++;
     }
-    days215Data.push(levelTo215);
+    days225Data.push(levelTo225);
 
     var rowDate = new Date();
     rowDate.setDate(seasonStart.getDate() + day - 1);
@@ -85,13 +85,13 @@ function populateDaysTable() {
       addedStyle = "id=\"today\" class=\"bg-warning\" ";
 
       $("#target100level").text(levelTo100);
-      $("#target215level").text(levelTo215);
+      $("#target225level").text(levelTo225);
     }
 
     tbody.append("<tr " + addedStyle + ">" + 
     "<th scope=\"row\">" + day + " (" + rowDate.toLocaleDateString("en-US", dateNoYearOptions) + ")</td>" +
     "<td>" + levelTo100 + " (" + numberWithCommas(Math.ceil(xp100PerDay * day)) + " XP)</td>" +
-    "<td>" + levelTo215 + " (" + numberWithCommas(Math.ceil(xp215PerDay * day)) + " XP)</td>" +
+    "<td>" + levelTo225 + " (" + numberWithCommas(Math.ceil(xp225PerDay * day)) + " XP)</td>" +
     "</tr>");
   }
 }
