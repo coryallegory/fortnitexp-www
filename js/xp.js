@@ -76,7 +76,7 @@ function populateDaysTable() {
     }
     days225Data.push(levelTo225);
 
-    var rowDate = new Date();
+    var rowDate = new Date(seasonStart.getTime());
     rowDate.setDate(seasonStart.getDate() + day - 1);
     daysDateData.push(rowDate.toLocaleDateString("en-US", dateNoYearOptions));
 
