@@ -65,12 +65,12 @@ function populateDaysTable() {
   var levelTo100 = 2;
   var levelTo225 = 2;
   for (day=1; day <= daysTotal; day++) {
-    var xp100Target = xp100PerDay * day;
+    var xp100Target = Math.round(xp100PerDay * day);
     while (totalPerLevel[levelTo100] < xp100Target) {
       levelTo100++;
     }
     days100Data.push(levelTo100);
-    var xp225Target = xp225PerDay * day;
+    var xp225Target = Math.round(xp225PerDay * day);
     while (totalPerLevel[levelTo225] < xp225Target) {
       levelTo225++;
     }
@@ -90,8 +90,8 @@ function populateDaysTable() {
 
     tbody.append("<tr " + addedStyle + ">" + 
     "<th scope=\"row\">" + day + " (" + rowDate.toLocaleDateString("en-US", dateNoYearOptions) + ")</td>" +
-    "<td>" + levelTo100 + " (" + numberWithCommas(Math.ceil(xp100PerDay * day)) + " XP)</td>" +
-    "<td>" + levelTo225 + " (" + numberWithCommas(Math.ceil(xp225PerDay * day)) + " XP)</td>" +
+    "<td>" + levelTo100 + " (" + numberWithCommas(xp100Target) + " XP)</td>" +
+    "<td>" + levelTo225 + " (" + numberWithCommas(xp225Target) + " XP)</td>" +
     "</tr>");
   }
 }
