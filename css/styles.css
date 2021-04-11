@@ -1,6 +1,9 @@
 a.navbar-brand {
   display: contents;
 }
+.navbar-dark .navbar-brand {
+  color: lightgreen;
+}
 body{
   padding-top: 70px;
 }
