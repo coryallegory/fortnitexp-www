@@ -4,3 +4,10 @@ a.navbar-brand {
 body{
   padding-top: 70px;
 }
+img.navbar-brand {
+  height: 1em;
+}
+
+#100card, #225card {
+  width: 18rem;
+}
