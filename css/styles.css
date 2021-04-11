@@ -4,7 +4,7 @@ a.navbar-brand {
 body{
   padding-top: 70px;
 }
-img.navbar-brand {
+.navbar-brand img {
   height: 1em;
 }
 
