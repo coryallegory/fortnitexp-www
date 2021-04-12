@@ -13,56 +13,45 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <script>
-      var navY;
-      $(window).scroll(function(){
-        if ($(window).scrollTop() < $("#navStub").offset().top) {
-          $(".navbar").removeClass("fixed-top");
-          $("#navStub").height(0);
-        } else {
-          $(".navbar").addClass("fixed-top");
-          $("#navStub").height($(".navbar").height());
-        }
-      });
-      
-    </script>
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
   </head>
   <body>
-    
-    <h1 class="banner display-4 text-center pt-1 mt-2 mx-4 mb-0 border-top border-bottom">MANITOBA LICENSE PLATES</h1>
 
-    <div id="navStub"></div>
-    <nav id="navbar" class="navbar navbar-expand-sm navbar-dark py-0 mx-4">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav" data-toggle="collapse" data-target=".navbar-collapse">
-        <div class="navbar-nav justify-content-center container-sm">
-          <a class="nav-item nav-link  " href="index.html">HOME</a>
-          <a class="nav-item nav-link  " href="collections.html">COLLECTIONS</a>
-          <a class="nav-item nav-link  " href="wanted.html">WANTED</a>
-          <a class="nav-item nav-link  " href="links.html">LINKS</a>
-          <a class="nav-item nav-link active " href="contact.html">CONTACT</a>
+    <div id="wrapper" class="px-4 pb-4">
+      
+      <h1 class="banner display-4 text-center pt-1 mt-2 mb-0 border-top border-bottom">MANITOBA LICENSE PLATES</h1>
+
+      <div id="navStub"></div>
+      <nav id="navbar" class="navbar navbar-expand-sm navbar-dark py-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" data-toggle="collapse" data-target=".navbar-collapse">
+          <div class="navbar-nav justify-content-center container-sm">
+            <a class="nav-item nav-link  " href="index.html">HOME</a>
+            <a class="nav-item nav-link  " href="collections.html">COLLECTIONS</a>
+            <a class="nav-item nav-link  " href="wanted.html">WANTED</a>
+            <a class="nav-item nav-link  " href="links.html">LINKS</a>
+            <a class="nav-item nav-link active " href="contact.html">CONTACT</a>
+          </div>
         </div>
+      </nav>
+
+
+      <div id="content" class="p-4 bg-light">
+
+        <h2 class="titleBlock">Contact</h2>
+
+        
+          <p>Drop me an email at:</p>
+          <p><a href="mailto:ross@manitobaplates.com">ross@manitobaplates.com</a></p>
+        
+        
       </div>
-    </nav>
 
-
-    <div id="content" class="p-4 mx-4 mb-4 bg-light">
-
-      <h2 class="titleBlock">Contact</h2>
-
-      
-        <p>Drop me an email at:</p>
-        <p><a href="mailto:ross@manitobaplates.com">ross@manitobaplates.com</a></p>
-      
-      
     </div>
-
 
   </body>
 </html>

@@ -13,66 +13,55 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <script>
-      var navY;
-      $(window).scroll(function(){
-        if ($(window).scrollTop() < $("#navStub").offset().top) {
-          $(".navbar").removeClass("fixed-top");
-          $("#navStub").height(0);
-        } else {
-          $(".navbar").addClass("fixed-top");
-          $("#navStub").height($(".navbar").height());
-        }
-      });
-      
-    </script>
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
   </head>
   <body>
-    
-    <h1 class="banner display-4 text-center pt-1 mt-2 mx-4 mb-0 border-top border-bottom">MANITOBA LICENSE PLATES</h1>
 
-    <div id="navStub"></div>
-    <nav id="navbar" class="navbar navbar-expand-sm navbar-dark py-0 mx-4">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav" data-toggle="collapse" data-target=".navbar-collapse">
-        <div class="navbar-nav justify-content-center container-sm">
-          <a class="nav-item nav-link active " href="index.html">HOME</a>
-          <a class="nav-item nav-link  " href="collections.html">COLLECTIONS</a>
-          <a class="nav-item nav-link  " href="wanted.html">WANTED</a>
-          <a class="nav-item nav-link  " href="links.html">LINKS</a>
-          <a class="nav-item nav-link  " href="contact.html">CONTACT</a>
+    <div id="wrapper" class="px-4 pb-4">
+      
+      <h1 class="banner display-4 text-center pt-1 mt-2 mb-0 border-top border-bottom">MANITOBA LICENSE PLATES</h1>
+
+      <div id="navStub"></div>
+      <nav id="navbar" class="navbar navbar-expand-sm navbar-dark py-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" data-toggle="collapse" data-target=".navbar-collapse">
+          <div class="navbar-nav justify-content-center container-sm">
+            <a class="nav-item nav-link active " href="index.html">HOME</a>
+            <a class="nav-item nav-link  " href="collections.html">COLLECTIONS</a>
+            <a class="nav-item nav-link  " href="wanted.html">WANTED</a>
+            <a class="nav-item nav-link  " href="links.html">LINKS</a>
+            <a class="nav-item nav-link  " href="contact.html">CONTACT</a>
+          </div>
         </div>
+      </nav>
+
+
+      <div id="content" class="p-4 bg-light">
+
+        <h2 class="titleBlock"></h2>
+
+        
+          <p>
+            Welcome to my site for license plates from the province of Manitoba in Canada.
+          </p>
+        	<p>
+        		My name is Ross Metcalfe and I have been collecting Manitoba license plates since 1967, when my father thought I should have a Canada Centennial Project. A box of 1920's and 30's Manitoba plates with my great uncle's (Justice T. L. Metcalfe, Judge for the 1919 Winnipeg General Strike) original 1909 certificate of registration and my grandfather's 1911 #52 disc were the beginning of my collection. My grandfather registered #52 until his death in 1926 and my father continued the number until the 1950's.
+        	</p>
+          <p>
+        		I joined ALPCA in the mid-70's and have collected all Manitoba passenger plates in pairs and in singles from 1911 to date, and have runs of dealer plates and truck plates as well. I also specialize in restoring old motorcycles and have restored twenty from 1910 up into the 1950's. My motorcycle passion had led me to almost completing my motorcycle license plate runs, only needing three more plates to complete my run from 1908 to present.
+        	</p>
+          <p>
+        		I hope you enjoy my collection, this site will be in a constant stage of development.
+          </p>
+        
+        
       </div>
-    </nav>
 
-
-    <div id="content" class="p-4 mx-4 mb-4 bg-light">
-
-      <h2 class="titleBlock"></h2>
-
-      
-        <p>
-          Welcome to my site for license plates from the province of Manitoba in Canada.
-        </p>
-      	<p>
-      		My name is Ross Metcalfe and I have been collecting Manitoba license plates since 1967, when my father thought I should have a Canada Centennial Project. A box of 1920's and 30's Manitoba plates with my great uncle's (Justice T. L. Metcalfe, Judge for the 1919 Winnipeg General Strike) original 1909 certificate of registration and my grandfather's 1911 #52 disc were the beginning of my collection. My grandfather registered #52 until his death in 1926 and my father continued the number until the 1950's.
-      	</p>
-        <p>
-      		I joined ALPCA in the mid-70's and have collected all Manitoba passenger plates in pairs and in singles from 1911 to date, and have runs of dealer plates and truck plates as well. I also specialize in restoring old motorcycles and have restored twenty from 1910 up into the 1950's. My motorcycle passion had led me to almost completing my motorcycle license plate runs, only needing three more plates to complete my run from 1908 to present.
-      	</p>
-        <p>
-      		I hope you enjoy my collection, this site will be in a constant stage of development.
-        </p>
-      
-      
     </div>
-
 
   </body>
 </html>

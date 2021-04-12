@@ -13,168 +13,157 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <script>
-      var navY;
-      $(window).scroll(function(){
-        if ($(window).scrollTop() < $("#navStub").offset().top) {
-          $(".navbar").removeClass("fixed-top");
-          $("#navStub").height(0);
-        } else {
-          $(".navbar").addClass("fixed-top");
-          $("#navStub").height($(".navbar").height());
-        }
-      });
-      
-    </script>
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
   </head>
   <body>
-    
-    <h1 class="banner display-4 text-center pt-1 mt-2 mx-4 mb-0 border-top border-bottom">MANITOBA LICENSE PLATES</h1>
 
-    <div id="navStub"></div>
-    <nav id="navbar" class="navbar navbar-expand-sm navbar-dark py-0 mx-4">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav" data-toggle="collapse" data-target=".navbar-collapse">
-        <div class="navbar-nav justify-content-center container-sm">
-          <a class="nav-item nav-link  " href="index.html">HOME</a>
-          <a class="nav-item nav-link  " href="collections.html">COLLECTIONS</a>
-          <a class="nav-item nav-link active " href="wanted.html">WANTED</a>
-          <a class="nav-item nav-link  " href="links.html">LINKS</a>
-          <a class="nav-item nav-link  " href="contact.html">CONTACT</a>
+    <div id="wrapper" class="px-4 pb-4">
+      
+      <h1 class="banner display-4 text-center pt-1 mt-2 mb-0 border-top border-bottom">MANITOBA LICENSE PLATES</h1>
+
+      <div id="navStub"></div>
+      <nav id="navbar" class="navbar navbar-expand-sm navbar-dark py-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" data-toggle="collapse" data-target=".navbar-collapse">
+          <div class="navbar-nav justify-content-center container-sm">
+            <a class="nav-item nav-link  " href="index.html">HOME</a>
+            <a class="nav-item nav-link  " href="collections.html">COLLECTIONS</a>
+            <a class="nav-item nav-link active " href="wanted.html">WANTED</a>
+            <a class="nav-item nav-link  " href="links.html">LINKS</a>
+            <a class="nav-item nav-link  " href="contact.html">CONTACT</a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
 
-    <div id="content" class="p-4 mx-4 mb-4 bg-light">
+      <div id="content" class="p-4 bg-light">
 
-      <h2 class="titleBlock">Wanted</h2>
+        <h2 class="titleBlock">Wanted</h2>
 
-      
-        <p>
-          If you have anything listed, or think you may have something I'd be interested in, please don't hesitate to <a href="contact.html">contact me</a>.
-        </p>
-        <p>
-          I am always looking to purchase <b>any</b> Manitoba license plates and related automobilia, and I'm always interested in upgrading my collection as well.
-        </p>
-        <p>
-          I'm also interested in buying old motorcycles and parts.
-        </p>
-      
-        <div class="accordion" id="wantedAccordion">
-      
-          <div class="card mb-4">
-            <div class="card-header collapsed text-light bg-dark" data-toggle="collapse" href="#collapse-54plates">
-              <a class="card-title">#52 License Plates</a>
+        
+          <p>
+            If you have anything listed, or think you may have something I'd be interested in, please don't hesitate to <a href="contact.html">contact me</a>.
+          </p>
+          <p>
+            I am always looking to purchase <b>any</b> Manitoba license plates and related automobilia, and I'm always interested in upgrading my collection as well.
+          </p>
+          <p>
+            I'm also interested in buying old motorcycles and parts.
+          </p>
+        
+          <div class="accordion" id="wantedAccordion">
+        
+            <div class="card mb-4">
+              <div class="card-header collapsed text-light bg-dark" data-toggle="collapse" href="#collapse-54plates">
+                <a class="card-title">#52 License Plates</a>
+              </div>
+              <div id="collapse-54plates" class="card-body collapse p-0" data-parent="#wantedAccordion">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <p>
+                      I will buy one plate or an entire collection to get what I need, <b>and I am always looking to purchase back my grandfather's #52 Manitoba license plates from 1911-1926. They were stolen from our family home while my father was fighting during WW2</b>.
+                    </p>
+                    <p>
+                      <center><b><u>No questions asked</u></b></center>
+                    </p>
+                    <p>
+                      I don't care how, or who you acquired them from. Too much water has passed under the bridge in seventy-five years. My family and I would just like to complete the run of #52 plates from 1911 to 1926 as they were originally issued to my grandfather.
+                    </p>
+                    <p>
+                      Please Note: we are in possession of the original 1911 disc, and fellow collector Ed Marchuck was kind enough to trade back to us #52's from 1918 and 1919. That still leaves a number of #52's out there somewhere. I would appreciate your help.
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div id="collapse-54plates" class="card-body collapse p-0" data-parent="#wantedAccordion">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <p>
-                    I will buy one plate or an entire collection to get what I need, <b>and I am always looking to purchase back my grandfather's #52 Manitoba license plates from 1911-1926. They were stolen from our family home while my father was fighting during WW2</b>.
-                  </p>
-                  <p>
-                    <center><b><u>No questions asked</u></b></center>
-                  </p>
-                  <p>
-                    I don't care how, or who you acquired them from. Too much water has passed under the bridge in seventy-five years. My family and I would just like to complete the run of #52 plates from 1911 to 1926 as they were originally issued to my grandfather.
-                  </p>
-                  <p>
-                    Please Note: we are in possession of the original 1911 disc, and fellow collector Ed Marchuck was kind enough to trade back to us #52's from 1918 and 1919. That still leaves a number of #52's out there somewhere. I would appreciate your help.
-                  </p>
-                </li>
-              </ul>
+        
+            <div class="card mb-4">
+              <div class="card-header collapsed text-light bg-dark" data-toggle="collapse" href="#collapse-motorcycleplates">
+                <a class="card-title">Manitoba Motorcycle Plates (<i>*I will pay more than anyone to complete my run.*</i>)</a>
+              </div>
+              <div id="collapse-motorcycleplates" class="card-body collapse p-0" data-parent="#wantedAccordion">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <span class="text-danger">1919</span> - The 1919 Manitoba Motorcycle Plate is a small tab, approximately 1 3/4"(height) x 2"(width), that is white on green. This tab attaches to a 4"x6" 1918 base, and will have a 3-digit or less number on the bottom. They are like the 1919 car tags, only smaller.
+                  </li>
+                  <li class="list-group-item">
+                    <span class="text-danger">1922</span> - 1922 Manitoba Motorcycle plates measure 3" x 7.5", and are white on black. Same as car plate, only smaller.
+                  </li>
+                  <li class="list-group-item">
+                    <span class="text-danger">1927</span> - The 1927 Manitoba Motorcycle Plate is approximately 4.25"x6.25" and is black on off-white. Same as the car plate, only smaller.
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-      
-          <div class="card mb-4">
-            <div class="card-header collapsed text-light bg-dark" data-toggle="collapse" href="#collapse-motorcycleplates">
-              <a class="card-title">Manitoba Motorcycle Plates (<i>*I will pay more than anyone to complete my run.*</i>)</a>
+        
+            <div class="card mb-4">
+              <div class="card-header collapsed text-light bg-dark" data-toggle="collapse" href="#collapse-passengerplates">
+                <a class="card-title">Manitoba Passenger Vehicle Plates (The following are needed in pairs)</a>
+              </div>
+              <div id="collapse-passengerplates" class="card-body collapse p-0" data-parent="#wantedAccordion">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <span class="text-danger">1922 (3 digits or less)</span> - I need a pair of 1922 3-digit Manitoba Passenger Plates. A single plate can be seen <a href="img/collections/passenger/1922a.jpg">here</a>.
+                  </li>
+                  <li class="list-group-item">
+                    <span class="text-danger">1923 (3 digits or less)</span> - I need a pair of 1923 3-digit Manitoba Passenger Plates. A mismatched pair can be seen <a href="img/collections/passenger/1923a.jpg">here</a>.
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div id="collapse-motorcycleplates" class="card-body collapse p-0" data-parent="#wantedAccordion">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <span class="text-danger">1919</span> - The 1919 Manitoba Motorcycle Plate is a small tab, approximately 1 3/4"(height) x 2"(width), that is white on green. This tab attaches to a 4"x6" 1918 base, and will have a 3-digit or less number on the bottom. They are like the 1919 car tags, only smaller.
-                </li>
-                <li class="list-group-item">
-                  <span class="text-danger">1922</span> - 1922 Manitoba Motorcycle plates measure 3" x 7.5", and are white on black. Same as car plate, only smaller.
-                </li>
-                <li class="list-group-item">
-                  <span class="text-danger">1927</span> - The 1927 Manitoba Motorcycle Plate is approximately 4.25"x6.25" and is black on off-white. Same as the car plate, only smaller.
-                </li>
-              </ul>
+        
+            <div class="card mb-4">
+              <div class="card-header collapsed text-light bg-dark" data-toggle="collapse" href="#collapse-seals">
+                <a class="card-title">Manitoba Pre-Issue License Aluminum Seals</a>
+              </div>
+              <div id="collapse-seals" class="card-body collapse p-0" data-parent="#wantedAccordion">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <p>
+                      From 1908 until 1910, cars were licensed by issuing a registration paper, and a round aluminum seal with numbers that would correspond to the car owner's homemade leather plates. The round seal was replaced in 1911 with an oval seal, which in turn was replaced halfway through the year with Manitoba's first <a href="img/collections/passenger/1911.jpg">porcelain plates in 1911</a>.
+                    </p>
+                    <p>
+                      <a href="img/wanted/seal.jpg">Here's</a> an etching of one of these discs. It's diameter is 2".
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-      
-          <div class="card mb-4">
-            <div class="card-header collapsed text-light bg-dark" data-toggle="collapse" href="#collapse-passengerplates">
-              <a class="card-title">Manitoba Passenger Vehicle Plates (The following are needed in pairs)</a>
+        
+            <div class="card mb-4">
+              <div class="card-header collapsed text-light bg-dark" data-toggle="collapse" href="#collapse-motorleague">
+                <a class="card-title">Manitoba Motor League Buffaloes and/or year discs</a>
+              </div>
+              <div id="collapse-motorleague" class="card-body collapse p-0" data-parent="#wantedAccordion">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <span class="text-danger">1931</span> - 1931 Manitoba Motor League Buffalo License Plate Topper. It will be the same as the <a href="img/collections/motorleague/1930.jpg">1930</a>, only it will say 1931.
+                  </li>
+                  <li class="list-group-item">
+                    <span class="text-danger">1932</span> - 1931 Manitoba Motor League Buffalo License Plate Topper. It will be the same as the <a href="img/collections/motorleague/1930.jpg">1930</a>, only it will say 1932.
+                  </li>
+                  <li class="list-group-item">
+                    <span class="text-danger">1936, 1937, 1939, 1940, 1941, 1942, 1943, 1944, 1945</span> - Manitoba Motor League Buffalo License Plate Topper. By <a href="img/collections/motorleague/1933.jpg">1933</a>, the Motor League Buffalo did not have a permanent year casted. They created year discs, which could be affixed to any buffalo issued from <a href="img/collections/motorleague/1933.jpg">1933</a> to <a href="img/collections/motorleague/1955.jpg">1955</a>. I'll be more than happy to buy the disc with the buffalo, or simply the disc on its own. <a href="img/collections/motorleague/1933.jpg">Here's the 1933</a> for comparison.
+                  </li>
+                  <li class="list-group-item">
+                    <b>Also, Manitoba Motor League and Winnipeg Auto Club radiator plaques, all years. I'm a serious collector of these.</b>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div id="collapse-passengerplates" class="card-body collapse p-0" data-parent="#wantedAccordion">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <span class="text-danger">1922 (3 digits or less)</span> - I need a pair of 1922 3-digit Manitoba Passenger Plates. A single plate can be seen <a href="img/collections/passenger/1922a.jpg">here</a>.
-                </li>
-                <li class="list-group-item">
-                  <span class="text-danger">1923 (3 digits or less)</span> - I need a pair of 1923 3-digit Manitoba Passenger Plates. A mismatched pair can be seen <a href="img/collections/passenger/1923a.jpg">here</a>.
-                </li>
-              </ul>
-            </div>
-          </div>
-      
-          <div class="card mb-4">
-            <div class="card-header collapsed text-light bg-dark" data-toggle="collapse" href="#collapse-seals">
-              <a class="card-title">Manitoba Pre-Issue License Aluminum Seals</a>
-            </div>
-            <div id="collapse-seals" class="card-body collapse p-0" data-parent="#wantedAccordion">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <p>
-                    From 1908 until 1910, cars were licensed by issuing a registration paper, and a round aluminum seal with numbers that would correspond to the car owner's homemade leather plates. The round seal was replaced in 1911 with an oval seal, which in turn was replaced halfway through the year with Manitoba's first <a href="img/collections/passenger/1911.jpg">porcelain plates in 1911</a>.
-                  </p>
-                  <p>
-                    <a href="img/wanted/seal.jpg">Here's</a> an etching of one of these discs. It's diameter is 2".
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-      
-          <div class="card mb-4">
-            <div class="card-header collapsed text-light bg-dark" data-toggle="collapse" href="#collapse-motorleague">
-              <a class="card-title">Manitoba Motor League Buffaloes and/or year discs</a>
-            </div>
-            <div id="collapse-motorleague" class="card-body collapse p-0" data-parent="#wantedAccordion">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <span class="text-danger">1931</span> - 1931 Manitoba Motor League Buffalo License Plate Topper. It will be the same as the <a href="img/collections/motorleague/1930.jpg">1930</a>, only it will say 1931.
-                </li>
-                <li class="list-group-item">
-                  <span class="text-danger">1932</span> - 1931 Manitoba Motor League Buffalo License Plate Topper. It will be the same as the <a href="img/collections/motorleague/1930.jpg">1930</a>, only it will say 1932.
-                </li>
-                <li class="list-group-item">
-                  <span class="text-danger">1936, 1937, 1939, 1940, 1941, 1942, 1943, 1944, 1945</span> - Manitoba Motor League Buffalo License Plate Topper. By <a href="img/collections/motorleague/1933.jpg">1933</a>, the Motor League Buffalo did not have a permanent year casted. They created year discs, which could be affixed to any buffalo issued from <a href="img/collections/motorleague/1933.jpg">1933</a> to <a href="img/collections/motorleague/1955.jpg">1955</a>. I'll be more than happy to buy the disc with the buffalo, or simply the disc on its own. <a href="img/collections/motorleague/1933.jpg">Here's the 1933</a> for comparison.
-                </li>
-                <li class="list-group-item">
-                  <b>Also, Manitoba Motor League and Winnipeg Auto Club radiator plaques, all years. I'm a serious collector of these.</b>
-                </li>
-              </ul>
-            </div>
+          
+        
           </div>
         
-      
-        </div>
-      
-      
-      
-    </div>
+        
+        
+      </div>
 
+    </div>
 
   </body>
 </html>
