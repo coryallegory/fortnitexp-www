@@ -1,16 +1,30 @@
-a.navbar-brand {
-  display: contents;
-}
-.navbar-dark .navbar-brand {
-  color: lightgreen;
-}
-body{
-  padding-top: 70px;
-}
-.navbar-brand img {
-  height: 1em;
+.banner {
+  color: #cc3300;
+  font-family: 'Bebas Neue', Sans-Serif;
+	-webkit-text-stroke: 1px #cc3300;
+	-webkit-text-fill-color: #ffcc00;
+
+  border-color: #cc3300 !important;
 }
 
-#100card, #225card {
-  width: 18rem;
+.navbar-dark {
+  background-color: black !important;
+}
+
+h2 {
+  color: #cc3300;
+}
+
+.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+
+.accordion .card-header:after {
+  content: "-";
+  float: right; 
+}
+.accordion .card-header.collapsed:after {
+  content: "+"; 
 }
