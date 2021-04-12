@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>Fortnite XP Daily Summary</title>
+    <title>Fortnite XP Per Level</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -43,9 +43,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup" data-toggle="collapse" data-target=".navbar-collapse">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active " href="index.html">Daily Summary</a>
+          <a class="nav-item nav-link  " href="index.html">Daily Summary</a>
           <a class="nav-item nav-link  " href="daily.html">Leveling Pace</a>
-          <a class="nav-item nav-link  " href="levels.html">XP Per Level</a>
+          <a class="nav-item nav-link active " href="levels.html">XP Per Level</a>
           <a class="nav-item nav-link  " href="about.html">About</a>
         </div>
       </div>
@@ -54,41 +54,28 @@
 
     <div id="content" class="pb-2 px-2">
 
-      <h1 class="titleBlock">Fortnite XP Daily Summary</h1>
+      <h1 class="titleBlock">Fortnite XP Per Level</h1>
 
       
-            <div id="summary" class="mb-3">
-              Fortnite's Chapter 2, Season 6 runs March 16, 2021 through June 8, 2021.
-              <br/>
-              There are currently 
-            </div>
+        Full table of experience points required to advance between each level for Fortnite Chapter 2, Season 6. The progression has remained the same for a few seasons now. There are no rewards expected past level 225 this season, however it is theoretically possible to continue leveling up infinitely...
+        <br/>
       
-            <div id="100card" class="card d-inline-block">
-              <div class="card-header">
-                <h5 class="card-title">Battle Pass Rewards</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Level 100</h6>
-              </div>
-              <div class="card-body">
-                <p class="card-text text-center bg-warning">
-                  Pace Level is <span id="target100level"></span> today.
-                </p>
-              </div>
-            </div>
-            <div id="225card" class="card d-inline-block">
-              <div class="card-header">
-                <h5 class="card-title">Max Rewards</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Level 225</h6>
-              </div>
-              <div class="card-body">
-                <p class="card-text text-center bg-warning">
-                  Pace Level is <span id="target225level"></span> today.
-                </p>
-              </div>
+            <div class="">
+              <table id="xpTable" class="table table-hover table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col" data-sortable="true">Level</th>
+                    <th scope="col" data-sortable="true">XP to reach</th>
+                    <th scope="col" data-sortable="true">XP Total</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
             </div>
       
       
-            <script>populateSummary();populateDaysTable();</script>
-           
+            <script>populateXpTable();</script>
+      
       
     </div>
 
