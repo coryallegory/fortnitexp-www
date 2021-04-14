@@ -99,6 +99,7 @@
             <li>XP Coins (Not Yet Released)</li>
             <li>General Gameplay Rewards</li>
           </ul>
+          <div class="mt-4" id="moredata"></div>
         </div>
         
       <script>
@@ -121,6 +122,12 @@
       
           
           $("#xpRemainingPerDay").html(numberWithCommas(xpPerDay) + " XP");
+      
+      
+          $("#moredata").html(""
+            + "<br/>" + daysRemaining + " days remaining in season"
+            + "<br/> You still require " + numberWithCommas(Math.ceil(targetXP - currentXP)) + " total XP"
+          );
         }
         calculate();
       </script>
