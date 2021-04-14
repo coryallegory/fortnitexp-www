@@ -16,7 +16,8 @@ var seasonStart = new Date("03/16/2021");
 var seasonEnd = new Date("06/09/2021");
 var daysRemaining = Math.ceil( (seasonEnd.getTime() - today.getTime()) / (1000 * 3600 * 24) );
 var daysTotal = Math.ceil( (seasonEnd.getTime() - seasonStart.getTime()) / (1000 * 3600 * 24) );
-
+var xp100PerDay = totalPerLevel[100]/daysTotal;
+var xp225PerDay = totalPerLevel[225]/daysTotal;
 
 function populateSummary() {
 
@@ -27,12 +28,12 @@ function populateSummary() {
   $("#100card .card-body").append("<p class=\"card-text\">" +
     numberWithCommas(totalPerLevel[100]) + " Total XP Required" +
     "<br/>" +
-    numberWithCommas(Math.ceil(totalPerLevel[100]/daysRemaining)) + " XP/day" +
+    numberWithCommas(Math.ceil(xp100PerDay)) + " XP/day" +
     "</p>");
     $("#225card .card-body").append("<p class=\"card-text\">" +
     numberWithCommas(totalPerLevel[225]) + " Total XP Required" +
     "<br/>" +
-    numberWithCommas(Math.ceil(totalPerLevel[225]/daysRemaining)) + " XP/day" +
+    numberWithCommas(Math.ceil(xp225PerDay)) + " XP/day" +
     "</p>");
 
 }
@@ -60,8 +61,6 @@ function populateDaysTable() {
   var tbody = $("#daysTable tbody");
 
   var day;
-  var xp100PerDay = totalPerLevel[100]/daysTotal;
-  var xp225PerDay = totalPerLevel[225]/daysTotal;
   var levelTo100 = 2;
   var levelTo225 = 2;
   for (day=1; day <= daysTotal; day++) {
