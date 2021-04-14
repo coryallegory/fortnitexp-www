@@ -46,6 +46,7 @@
           <a class="nav-item nav-link  " href="index.html">Daily Summary</a>
           <a class="nav-item nav-link  " href="daily.html">Leveling Pace</a>
           <a class="nav-item nav-link  " href="levels.html">XP Per Level</a>
+          <a class="nav-item nav-link active " href="calculator.html">Calculator</a>
           <a class="nav-item nav-link  " href="about.html">About</a>
         </div>
       </div>
@@ -71,30 +72,35 @@
               <input type="number" class="form-control" id="inputTargetLevel" value="225" onchange="calculate(this)">
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="checkCreativeXP" onchange="calculate(this)">
             <label class="form-check-label" for="checkCreativeXP">
-              Earn Creative XP Daily (8400XP/15min earned in Creative Mode, up to 5 times/day)
+              Earn Full Creative Daily XP<br />(5x 8,400 XP/15min in Creative Mode)
             </label>
           </div>
-          <div class="form-group">
+          <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="checkChallengeXP" onchange="calculate(this)">
             <label class="form-check-label" for="checkChallengeXP">
-              Complete 3 Uncommon (Green) Challenges Daily (22,000XP x 3/day)
+              Complete All 3 Daily (Green) Quests<br />(3x 22,000 XP)
             </label>
           </div>
+          <br />
           <div class="form-group">
-            <label for="inputCommonChallenges">Common (Grey) Challenges Completed Per Day (2,200XP/ea)</label>
+            <label for="inputCommonChallenges">Common (Grey) Quests Completed Per Day (2,200 XP/ea)</label>
             <input type="number" class="form-control" id="inputCommonChallenges" value="0" onchange="calculate(this)">
           </div>
           <button type="submit" class="btn btn-primary">Calculate</button>
         </form>
       
-      
-        <div id="xpRemainingPerDay"></div>
-        XP Required per day via Rare/Epic/Legendary Challenges or XP Coins and In-Game play
-      
-      
+        <div id="results" class="card m-2 p-2 bg-dark text-light">
+          <div id="xpRemainingPerDay" class="text-warning"></div>left to grind daily via:
+          <ul>
+            <li>Blue/Purple/Gold Quests</li>
+            <li>XP Coins (Not Yet Released)</li>
+            <li>General Gameplay Rewards</li>
+          </ul>
+        </div>
+        
       <script>
         function calculate(elem) {
           var currentLevel = $("#inputCurrentLevel").val();
@@ -114,8 +120,9 @@
           xpPerDay -= (commonChallengeCount * 2200);
       
           
-          $("#xpRemainingPerDay").html(numberWithCommas(xpPerDay));
+          $("#xpRemainingPerDay").html(numberWithCommas(xpPerDay) + " XP");
         }
+        calculate();
       </script>
            
       
