@@ -61,7 +61,7 @@
         <p>
           Calculate how much XP you'll need daily to reach your target level. It will also tell you how many days early you're set to finish if you exceed the rate required.
         </p>
-        <form action="#" onsubmit="return calculate(this);">
+        <form action="" onsubmit="return calculate(this);">
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="inputCurrentLevel">Current Level</label>
@@ -88,6 +88,10 @@
           <div class="form-group">
             <label for="inputCommonChallenges">Common (Grey) Quests Completed Per Day (2,200 XP/ea)</label>
             <input type="number" class="form-control" id="inputCommonChallenges" value="0" onchange="calculate(this)">
+          </div>
+          <div class="form-group">
+            <label for="inputOtherXP">Other XP Earned Per Day</label>
+            <input type="number" class="form-control" id="inputOtherXP" value="0" onchange="calculate(this)">
           </div>
           <button type="submit" class="btn btn-primary">Calculate</button>
         </form>
@@ -119,8 +123,10 @@
           {
             xpEarnedPerDay += 66000;
           }
-          var commonChallengeCount = $("#inputCommonChallenges").val();
+          var commonChallengeCount = parseInt($("#inputCommonChallenges").val(), 10) || 0;
           xpEarnedPerDay += (commonChallengeCount * 2200);
+          var otherXPPerDay = parseInt($("#inputOtherXP").val(), 10) || 0;
+          xpEarnedPerDay += otherXPPerDay;
       
           if (xpEarnedPerDay <= xpNeededPerDay)
           {
@@ -137,8 +143,8 @@
           var dataMessage = ""
             + "<br/>" + daysRemaining + " days remaining in season"
             + "<br/> You require " + numberWithCommas(Math.ceil(xpNeeded)) + " XP in total"
-            + "<br/> You will earn " + numberWithCommas(Math.ceil(xpEarnedPerDay)) + " XP/day from the above (counting today)"
             + "<br/> You will earn " + numberWithCommas(Math.ceil(xpEarnedPerDay * daysRemaining)) + " XP in total from the above"
+            + "<br/> You will earn " + numberWithCommas(Math.ceil(xpEarnedPerDay)) + " XP/day (counting today)"
           ;
           $("#moredata").html(dataMessage);
         }
