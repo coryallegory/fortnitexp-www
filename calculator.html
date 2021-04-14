@@ -59,7 +59,7 @@
 
       
         <p>
-          Calculate your daily XP targets.
+          Calculate how much XP you'll need daily to reach your target level. It will also tell you how many days early you're set to finish if you exceed the rate required.
         </p>
         <form action="#" onsubmit="return calculate(this);">
           <div class="form-row">
@@ -93,8 +93,8 @@
         </form>
       
         <div id="results" class="card m-2 p-2 bg-dark text-light">
-          <div id="xpRemainingPerDay" class="text-warning"></div>left to grind daily via:
-          <ul>
+          <span id="xpRemainingPerDay" class="text-warning font-weight-bold"></span> left to grind daily via:
+          <ul id="grindList">
             <li>Blue/Purple/Gold Quests</li>
             <li>XP Coins (Not Yet Released)</li>
             <li>General Gameplay Rewards</li>
@@ -108,26 +108,39 @@
           var currentXP = totalPerLevel[currentLevel];
           var targetLevel = $("#inputTargetLevel").val();
           var targetXP = totalPerLevel[targetLevel];
-          var xpPerDay = Math.ceil((targetXP - currentXP)/daysTotal);
+          var xpNeeded = targetXP - currentXP;
+          var xpNeededPerDay = xpNeeded/daysRemaining;
+          var xpEarnedPerDay = 0;
           if ($('#checkCreativeXP').is(":checked"))
           {
-            xpPerDay -= 42000;
+            xpEarnedPerDay += 42000;
           }
           if ($('#checkChallengeXP').is(":checked"))
           {
-            xpPerDay -= 66000;
+            xpEarnedPerDay += 66000;
           }
           var commonChallengeCount = $("#inputCommonChallenges").val();
-          xpPerDay -= (commonChallengeCount * 2200);
+          xpEarnedPerDay += (commonChallengeCount * 2200);
       
+          if (xpEarnedPerDay <= xpNeededPerDay)
+          {
+            var xpLeftPerDay = Math.ceil(xpNeededPerDay - xpEarnedPerDay);
+            $("#xpRemainingPerDay").html(numberWithCommas(xpLeftPerDay) + " XP");
+            $("grindList").show();
+          } else {
+            var daysToReach = Math.ceil(xpNeeded / xpEarnedPerDay);
+            $("#xpRemainingPerDay").html("You will finish " + Math.min(daysRemaining,(daysRemaining - daysToReach)) + " days early!");
+            $("grindList").hide();
+          }
           
-          $("#xpRemainingPerDay").html(numberWithCommas(xpPerDay) + " XP");
       
-      
-          $("#moredata").html(""
+          var dataMessage = ""
             + "<br/>" + daysRemaining + " days remaining in season"
-            + "<br/> You still require " + numberWithCommas(Math.ceil(targetXP - currentXP)) + " total XP"
-          );
+            + "<br/> You require " + numberWithCommas(Math.ceil(xpNeeded)) + " XP in total"
+            + "<br/> You will earn " + numberWithCommas(Math.ceil(xpEarnedPerDay)) + " XP/day from the above (counting today)"
+            + "<br/> You will earn " + numberWithCommas(Math.ceil(xpEarnedPerDay * daysRemaining)) + " XP in total from the above"
+          ;
+          $("#moredata").html(dataMessage);
         }
         calculate();
       </script>
