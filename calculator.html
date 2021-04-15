@@ -63,7 +63,7 @@
         <p>
           Calculate how much XP you'll need daily to reach your target level. It will also tell you how many days early you'll finish (the number of days you can skip your grind).
         </p>
-        <form class="mb-4" action="#" onsubmit="return calculate(this);">
+        <form class="mb-4">
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="inputCurrentLevel">Current Level:</label>
@@ -98,7 +98,7 @@
             </div>
           </div>
           <div class="w-100 text-center">
-            <button type="submit" class="m-auto btn btn-primary">Calculate</button>
+            <button type="button" class="btn btn-primary" onclick="javascript: calculate(this);">Calculate</button>
           </div>
         </form>
       
