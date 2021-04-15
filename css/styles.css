@@ -14,3 +14,7 @@ body{
 #100card, #225card {
   width: 18rem;
 }
+
+.rewardImage {
+  height: 5em;
+}
