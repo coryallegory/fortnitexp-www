@@ -63,39 +63,43 @@
         <p>
           Calculate how much XP you'll need daily to reach your target level. It will also tell you how many days early you'll finish (the number of days you can skip your grind).
         </p>
-        <form action="" onsubmit="return calculate(this);">
+        <form class="mb-4" action="" onsubmit="return calculate(this);">
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="inputCurrentLevel">Current Level</label>
+              <label for="inputCurrentLevel">Current Level:</label>
               <input type="number" class="form-control" id="inputCurrentLevel" value="1" onchange="calculate(this)">
             </div>
             <div class="form-group col-md-6">
-              <label for="inputTargetLevel">Target Level</label>
+              <label for="inputTargetLevel">Target Level:</label>
               <input type="number" class="form-control" id="inputTargetLevel" value="225" onchange="calculate(this)">
             </div>
           </div>
-          <div class="form-check">
+          <div class="form-check mb-2">
             <input class="form-check-input" type="checkbox" value="" id="checkCreativeXP" onchange="calculate(this)">
             <label class="form-check-label" for="checkCreativeXP">
-              Earn Full Creative Daily XP<br />(5x 8,400 XP/15min in Creative Mode)
+              Earn Full Creative Daily XP (5x 8,400 XP/15min in Creative Mode)
             </label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="checkChallengeXP" onchange="calculate(this)">
             <label class="form-check-label" for="checkChallengeXP">
-              Complete All 3 Daily (Green) Quests<br />(3x 22,000 XP)
+              Complete All 3 Daily (Green) Quests (3x 22,000 XP)
             </label>
           </div>
           <br />
-          <div class="form-group">
-            <label for="inputCommonChallenges">Common (Grey) Quests Completed Per Day (2,200 XP/ea)</label>
-            <input type="number" class="form-control" id="inputCommonChallenges" value="0" onchange="calculate(this)">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputCommonChallenges">Common (Grey) Quests Completed Per Day (2,200 XP/ea):</label>
+              <input type="number" class="form-control" id="inputCommonChallenges" value="0" onchange="calculate(this)">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputOtherXP">Other XP Earned Per Day:</label>
+              <input type="number" class="form-control" id="inputOtherXP" value="0" onchange="calculate(this)">
+            </div>
           </div>
-          <div class="form-group">
-            <label for="inputOtherXP">Other XP Earned Per Day</label>
-            <input type="number" class="form-control" id="inputOtherXP" value="0" onchange="calculate(this)">
+          <div class="w-100 text-center">
+            <button type="submit" class="m-auto btn btn-primary">Calculate</button>
           </div>
-          <button type="submit" class="btn btn-primary">Calculate</button>
         </form>
       
         <div id="results" class="card m-2 p-2 bg-dark text-light">
