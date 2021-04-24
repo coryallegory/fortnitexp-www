@@ -6,6 +6,7 @@ a.navbar-brand {
 }
 body{
   padding-top: 70px;
+  margin-bottom: 50px;
 }
 .navbar-brand img {
   height: 1em;

@@ -81,13 +81,13 @@ function populateDaysTable() {
 
     var addedStyle = "";
     if (isToday(rowDate)) {
-      addedStyle = "id=\"today\" class=\"bg-warning\" ";
+      addedStyle = " class=\"today bg-warning\" ";
 
       $("#target100level").text(levelTo100);
       $("#target225level").text(levelTo225);
     }
 
-    tbody.append("<tr " + addedStyle + ">" + 
+    tbody.append("<tr id=\"day" + day + "\" " + addedStyle + ">" + 
     "<th scope=\"row\">" + day + " (" + rowDate.toLocaleDateString("en-US", dateNoYearOptions) + ")</td>" +
     "<td>" + levelTo100 + " (" + numberWithCommas(xp100Target) + " XP)</td>" +
     "<td>" + levelTo225 + " (" + numberWithCommas(xp225Target) + " XP)</td>" +
