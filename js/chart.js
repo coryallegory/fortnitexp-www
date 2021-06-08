@@ -12,7 +12,7 @@ var myChart = new Chart(ctx, {
         fill: false,
       },
       {
-        label: 'Pace to Level 225',
+        label: 'Pace to Level 200',
         backgroundColor: '#ff0000',
         borderColor: '#ff0000',
         data: days225Data,
@@ -35,7 +35,7 @@ var myChart = new Chart(ctx, {
         display: true,
         scaleLabel: {
           display: true,
-          labelString: 'Days Through Chapter 2 Season 6',
+          labelString: 'Days Through Chapter 2 Season 7',
         },
       }],
       yAxes: [{
