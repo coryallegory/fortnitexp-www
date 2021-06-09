@@ -15,7 +15,7 @@ var myChart = new Chart(ctx, {
         label: 'Pace to Level 200',
         backgroundColor: '#ff0000',
         borderColor: '#ff0000',
-        data: days225Data,
+        data: days200Data,
         fill: false,
       }
     ]
