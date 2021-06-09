@@ -82,13 +82,13 @@
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="checkChallengeXP" onchange="calculate(this)">
             <label class="form-check-label" for="checkChallengeXP">
-              Complete All 3 Daily (Green) Quests (3x 22,000 XP)
+              Complete All 3 Daily (Green) Quests (3x 17,000 XP)
             </label>
           </div>
           <br />
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="inputCommonChallenges">Common (Grey) Quests Completed Per Day (2,200 XP/ea):</label>
+              <label for="inputCommonChallenges">Common (Grey) Quests Completed Per Day (1,700 XP/ea):</label>
               <input type="number" class="form-control" id="inputCommonChallenges" value="0" onchange="calculate(this)">
             </div>
             <div class="form-group col-md-6">
@@ -126,10 +126,10 @@
           }
           if ($('#checkChallengeXP').is(":checked"))
           {
-            xpEarnedPerDay += 66000;
+            xpEarnedPerDay += 51000;
           }
           var commonChallengeCount = parseInt($("#inputCommonChallenges").val(), 10) || 0;
-          xpEarnedPerDay += (commonChallengeCount * 2200);
+          xpEarnedPerDay += (commonChallengeCount * 5100);
           var otherXPPerDay = parseInt($("#inputOtherXP").val(), 10) || 0;
           xpEarnedPerDay += otherXPPerDay;
       
