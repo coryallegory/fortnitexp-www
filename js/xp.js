@@ -21,9 +21,9 @@ var xp200PerDay = totalPerLevel[200]/daysTotal;
 
 function populateSummary() {
 
-  var percentage = Math.floor(100-daysRemaining/0.84);
+  var percentage = Math.floor(100-daysRemaining*100/daysTotal);
 
-  $("#summary").append("<span class=\"text-danger\">" + daysRemaining + "</span>/84 Days Remaining. We\'re " + percentage + "% there.");
+  $("#summary").append("<span class=\"text-danger\">" + daysRemaining + "</span>/" + daysTotal + " Days Remaining. We\'re " + percentage + "% there.");
     
   $("#100card .card-body").append("<p class=\"card-text\">" +
     numberWithCommas(totalPerLevel[100]) + " Total XP Required" +
