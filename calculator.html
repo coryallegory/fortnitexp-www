@@ -82,15 +82,11 @@
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="checkChallengeXP" onchange="calculate(this)">
             <label class="form-check-label" for="checkChallengeXP">
-              Complete All 3 Daily (Green) Quests (3x 17,000 XP)
+              Complete Daily Punchcard (Green Quests, 3x 17,000 XP)
             </label>
           </div>
           <br />
           <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputCommonChallenges">Common (Grey) Quests Completed Per Day (1,700 XP/ea):</label>
-              <input type="number" class="form-control" id="inputCommonChallenges" value="0" onchange="calculate(this)">
-            </div>
             <div class="form-group col-md-6">
               <label for="inputOtherXP">Other XP Earned Per Day:</label>
               <input type="number" class="form-control" id="inputOtherXP" value="0" onchange="calculate(this)">
@@ -104,8 +100,6 @@
         <div id="results" class="card m-2 p-2 bg-dark text-light">
           <span id="xpRemainingPerDay" class="text-warning font-weight-bold"></span> left to grind daily via:
           <ul id="grindList">
-            <li>Blue/Purple/Gold Quests</li>
-            <li>XP Coins (Not Yet Released)</li>
             <li>General Gameplay Rewards</li>
           </ul>
           <div class="mt-4" id="moredata"></div>
@@ -128,8 +122,6 @@
           {
             xpEarnedPerDay += 51000;
           }
-          var commonChallengeCount = parseInt($("#inputCommonChallenges").val(), 10) || 0;
-          xpEarnedPerDay += (commonChallengeCount * 5100);
           var otherXPPerDay = parseInt($("#inputOtherXP").val(), 10) || 0;
           xpEarnedPerDay += otherXPPerDay;
       
