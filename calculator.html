@@ -82,7 +82,7 @@
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="checkChallengeXP" onchange="calculate(this)">
             <label class="form-check-label" for="checkChallengeXP">
-              Complete Daily Punchcard (Green Quests, 3x 45,000 XP)
+              Complete Daily Punchcard (Green Quests, 5x 45,000 XP)
             </label>
           </div>
           <br />
@@ -120,7 +120,7 @@
           }
           if ($('#checkChallengeXP').is(":checked"))
           {
-            xpEarnedPerDay += 135000;
+            xpEarnedPerDay += 225000;
           }
           var otherXPPerDay = parseInt($("#inputOtherXP").val(), 10) || 0;
           xpEarnedPerDay += otherXPPerDay;
