@@ -76,7 +76,7 @@
           <div class="form-check mb-2">
             <input class="form-check-input" type="checkbox" value="" id="checkCreativeXP" onchange="calculate(this)">
             <label class="form-check-label" for="checkCreativeXP">
-              Earn Full Creative Daily XP (5x 25,200 XP/15min in Creative Mode)
+              Earn Full Creative Daily XP (5x 12,000 XP/15min in Creative Mode)
             </label>
           </div>
           <div class="form-check">
@@ -116,7 +116,7 @@
           var xpEarnedPerDay = 0;
           if ($('#checkCreativeXP').is(":checked"))
           {
-            xpEarnedPerDay += 126000;
+            xpEarnedPerDay += 60000;
           }
           if ($('#checkChallengeXP').is(":checked"))
           {
