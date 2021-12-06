@@ -12,8 +12,8 @@ function isToday(someDate) {
 var dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
 var dateNoYearOptions = { month: 'long', day: 'numeric' };
 var today = new Date();
-var seasonStart = new Date("09/13/2021");
-var seasonEnd = new Date("12/04/2021");
+var seasonStart = new Date("12/05/2021");
+var seasonEnd = new Date("03/19/2022");
 var daysRemaining = Math.ceil( (seasonEnd.getTime() - today.getTime()) / (1000 * 3600 * 24) );
 var daysTotal = Math.ceil( (seasonEnd.getTime() - seasonStart.getTime()) / (1000 * 3600 * 24) );
 var xp100PerDay = totalPerLevel[100]/daysTotal;
