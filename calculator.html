@@ -28,8 +28,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="js/xptable-min.js?v=ch3s03"></script>
-    <script src="js/xp-min.js?v=ch3s03"></script>
+    <script src="js/xptable-min.js?v=ch3s03-1"></script>
+    <script src="js/xp-min.js?v=ch3s03-1"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
   </head>
@@ -85,6 +85,18 @@
           <br />
           <div class="form-row">
             <div class="form-group col-md-6">
+              <label for="inputCreativeXP">Creative XP Earned Per Day:</label>
+              <input type="number" class="form-control" id="inputCreativeXP" value="0" onchange="calculate(this)">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputSTWXP">Save The World XP Earned Per Day:</label>
+              <input type="number" class="form-control" id="inputSTWXP" value="0" onchange="calculate(this)">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
               <label for="inputOtherXP">Other XP Earned Per Day:</label>
               <input type="number" class="form-control" id="inputOtherXP" value="0" onchange="calculate(this)">
             </div>
@@ -121,8 +133,10 @@
           {
             xpEarnedPerDay += 48000;
           }
+          var creativeXPPerDay = parseInt($("#inputCreativeXP").val(), 10) || 0;
+          var stwXPPerDay = parseInt($("#inputSTWXP").val(), 10) || 0;
           var otherXPPerDay = parseInt($("#inputOtherXP").val(), 10) || 0;
-          xpEarnedPerDay += otherXPPerDay;
+          xpEarnedPerDay += creativeXPPerDay + stwXPPerDay + otherXPPerDay;
       
           if (xpEarnedPerDay <= xpNeededPerDay)
           {
