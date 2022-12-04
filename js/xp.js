@@ -12,9 +12,9 @@ function isToday(someDate) {
 var dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
 var dateNoYearOptions = { month: 'long', day: 'numeric' };
 var today = new Date();
-var seasonStart = new Date("09/18/2022");
-var seasonEnd = new Date("12/02/2022");
-var daysRemaining = Math.ceil( (seasonEnd.getTime() - today.getTime()) / (1000 * 3600 * 24) ) + 1;
+var seasonStart = new Date("12/04/2022");
+var seasonEnd = new Date("03/11/2023");
+var daysRemaining = Math.ceil( (seasonEnd.getTime() - today.getTime()) / (1000 * 3600 * 24) );
 var daysTotal = Math.ceil( (seasonEnd.getTime() - seasonStart.getTime()) / (1000 * 3600 * 24) );
 var xp100PerDay = totalPerLevel[100]/daysTotal;
 var xp200PerDay = totalPerLevel[200]/daysTotal;
