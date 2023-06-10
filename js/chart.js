@@ -35,7 +35,7 @@ var myChart = new Chart(ctx, {
         display: true,
         scaleLabel: {
           display: true,
-          labelString: 'Days Through Chapter 4 Season 2',
+          labelString: 'Days Through Chapter 4 Season 3',
         },
       }],
       yAxes: [{
