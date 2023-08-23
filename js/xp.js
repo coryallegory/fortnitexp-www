@@ -13,7 +13,7 @@ var dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
 var dateNoYearOptions = { month: 'long', day: 'numeric' };
 var today = new Date();
 var seasonStart = new Date("06/09/2023");
-var seasonEnd = new Date("08/26/2023");
+var seasonEnd = new Date("08/25/2023");
 var daysRemaining = Math.ceil( (seasonEnd.getTime() - today.getTime()) / (1000 * 3600 * 24) );
 var daysTotal = Math.ceil( (seasonEnd.getTime() - seasonStart.getTime()) / (1000 * 3600 * 24) );
 var xp100PerDay = totalPerLevel[100]/daysTotal;
@@ -26,14 +26,14 @@ function populateSummary() {
   $("#summary").append("<span class=\"text-danger\">" + daysRemaining + "</span>/" + daysTotal + " Days Remaining. We\'re " + percentage + "% there.");
     
   $("#100card .card-body").append("<p class=\"card-text\">" +
-    numberWithCommas(totalPerLevel[100]) + " Total XP Required" +
+    numberWithCommas(totalPerLevel[100]) + " XP Total." +
     "<br/>" +
-    numberWithCommas(Math.ceil(xp100PerDay)) + " XP/day" +
+    numberWithCommas(Math.ceil(xp100PerDay)) + " XP/day." +
     "</p>");
     $("#200card .card-body").append("<p class=\"card-text\">" +
-    numberWithCommas(totalPerLevel[200]) + " Total XP Required" +
+    numberWithCommas(totalPerLevel[200]) + " XP Total." +
     "<br/>" +
-    numberWithCommas(Math.ceil(xp200PerDay)) + " XP/day" +
+    numberWithCommas(Math.ceil(xp200PerDay)) + " XP/day." +
     "</p>");
 
 }
