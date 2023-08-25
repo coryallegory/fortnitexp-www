@@ -2,7 +2,7 @@ a.navbar-brand {
   display: contents;
 }
 .navbar-dark .navbar-brand {
-  color: lightgreen;
+  color: #FFD700;
 }
 body{
   padding-top: 70px;
@@ -11,13 +11,23 @@ body{
   padding-right: 10px;
 }
 .navbar-brand img {
-  height: 1em;
+  height: 1.5em;
 }
 
-#100card, #200card {
-  width: 18rem;
+.card {
+  font-size: 0.8em;
 }
 
 .rewardImage {
-  height: 6em;
+  height: 5em;
+}
+
+.avatar {
+  max-width: 30%;
+}
+
+.adContainer {
+  background-color: black;
+  margin-bottom: 10px;
+  padding: 10px;
 }

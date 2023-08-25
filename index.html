@@ -9,8 +9,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
-    <title>Fortnite XP Daily Summary</title>
+    <title>Daily Summary</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -28,8 +31,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="js/xptable-min.js?v=ch4s03-1"></script>
-    <script src="js/xp-min.js?v=ch4s03-1"></script>
+    <script src="js/xptable-min.js?v=ch4s4"></script>
+    <script src="js/xp-min.js?v=ch4s4"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
   </head>
@@ -38,13 +41,13 @@
     <div id="top"></div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light fixed-top">
-      <a class="navbar-brand" href="index.html"><img src="img/xp.png" alt="logo">Fortnite XP: Ch 4 Season 3</a>
+      <a class="navbar-brand" href="index.html"><img src="img/nav_logo_gold.png" alt="logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup" data-toggle="collapse" data-target=".navbar-collapse">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active " href="index.html">Daily Summary</a>
+          <a class="nav-item nav-link  " href="index.html">Daily Summary</a>
           <a class="nav-item nav-link  " href="daily.html">Leveling Pace</a>
           <a class="nav-item nav-link  " href="levels.html">XP Per Level</a>
           <a class="nav-item nav-link  " href="calculator.html">Calculator</a>
@@ -56,60 +59,68 @@
 
     <div id="content" class="pb-2 px-2">
 
-      <h1 class="titleBlock">Fortnite XP Daily Summary</h1>
+      <h1 class="titleBlock">Daily Summary</h1>
 
       
             <div id="summary" class="mb-3">
-              Fortnite's Chapter 4, Season 3 runs June 9, 2023 until August 25, 2023 (3am ET / 7am UTC).
+              Chapter 4, Season 4 runs August 25, 2023 through November 10, 2023.
               <br />
               There are currently 
             </div>
       
             <div id="100card" class="card d-inline-block mb-4">
-              <div class="card-header">
-                <div class="d-inline-block align-top">
-                  <h5 class="card-title text-nowrap">Battle Pass<br />Rewards</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Level 100<br/>(500⭐)</h6>
+              <div class="card-header pt-1">
+                <p class="card-title text-nowrap font-weight-bold text-center mb-1">Battle Pass Rewards</p>
+                <div class="d-inline-block mr-2">
+                  <img class="rewardImage img-thumbnail" src="img/200reward-unknown.jpg">
                 </div>
-                <div class="d-inline-block ml-4 float-right">
-                  <img class="rewardImage img-thumbnail" src="img/100reward-s4ch3.jpg">
+                <div class="d-inline-block float-right">
+                  <p class="card-subtitle text-muted text-right pt-3">Level 100<br/>(500⭐)</p>
                 </div>
               </div>
-              <div class="card-body">
-                <p class="card-text text-center bg-warning">
-                  Pace Level is <span id="target100level"></span> today.
+              <div class="card-body py-1">
+                <p class="card-text text-center mb-1">
+                  Today's Pace:
+                </p>
+                <p class="card-text text-center bg-warning font-weight-bold">
+                  Level <span id="target100level"></span>
                 </p>
               </div>
             </div>
-            <div id="200card" class="card d-inline-block mb-4">
-              <div class="card-header">
-                <div class="d-inline-block align-top">
-                  <h5 class="card-title text-nowrap">Bonus<br />Rewards</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Level 200<br/>(1000⭐)</h6>
+            <div id="200card" class="card d-inline-block mb-4 ml-2">
+              <div class="card-header pt-1">
+                <p class="card-title text-nowrap font-weight-bold text-center mb-1">Bonus Rewards</p>
+                <div class="d-inline-block float-left">
+                  <p class="card-subtitle text-muted text-right pt-3">Level 200<br/>(1000⭐)</p>
                 </div>
-                <div class="d-inline-block ml-4 float-right">
-                  <img class="rewardImage img-thumbnail" src="img/200reward-s4ch3.jpg">
+                <div class="d-inline-block ml-2">
+                  <img class="rewardImage img-thumbnail" src="img/200reward-unknown.jpg">
                 </div>
               </div>
-              <div class="card-body">
-                <p class="card-text text-center bg-warning">
-                  Pace Level is <span id="target200level"></span> today.
+              <div class="card-body py-1">
+                <p class="card-text text-center mb-1">
+                  Today's Pace:
+                </p>
+                <p class="card-text text-center bg-warning font-weight-bold">
+                  Level <span id="target200level"></span>
                 </p>
               </div>
             </div>
       
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8080880445104035"
-                crossorigin="anonymous"></script>
-            <!-- fortnite-banner -->
-            <ins class="adsbygoogle"
-              style="display:block"
-              data-ad-client="ca-pub-8080880445104035"
-              data-ad-slot="1728739169"
-              data-ad-format="auto"
-              data-full-width-responsive="true"></ins>
-            <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div class="adContainer">
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8080880445104035"
+                  crossorigin="anonymous"></script>
+              <!-- fortnite-banner -->
+              <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-8080880445104035"
+                data-ad-slot="1728739169"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </div>
       
             <h2>How to Earn XP</h2>
       
@@ -118,9 +129,8 @@
               <li>Complete your Daily Bonus Goal each day (48,000 XP/day)</li>
               <li>Complete Weekly Quests and Bonus Goals (15,000 XP/quest &amp; 43,000 XP/goal)</li>
               <li>Play Save The World (450,000 XP/day)</li>
-              <li>Play Creative Mode for accolades (up to 100,000-200,000 XP/day)</strike></li>
-              <li>Complete Milestone Quests and Bonus Goals (5,000 XP/quest &amp; 20,000 XP/goal)</li>
-              <li>Play Imposters (5,000-10,000+ XP/game)</li>
+              <li>Play Creative &amp UEFN Maps (up to 200,000-300,000 XP/day)</strike></li>
+              <li>Complete Milestone Quests and Bonus Goals (5,000 XP/quest &amp; 30,000 XP/goal)</li>
               <li>Play game modes like Team Rumble where you can eliminate a lot of opponents and open a lot of chests with guaranteed spawn rates.</li>
               <li>Open all items and pick up all foragable items you come across (small amounts of XP add up)</li>
             </ol>
@@ -132,11 +142,10 @@
             <ul class="border d-inline-block pr-2 py-2">
               <li>Quests (Daily, Season, Milestone, and Weekly/Characters)</li>
               <li>Save The World XP</li>
-              <li>Creative XP Accolades</li>
-              <li>Impostors game mode</li>
+              <li>Creative &amp UEFN Maps</li>
               <li>General Gameplay</li>
               <li>Supercharged XP (Meh)</li>
-              <li><strike>Creative XP Idle</strike></li>
+              <li><strike>Impostors game mode</strike></li>
               <li><strike>Teammate XP Boost</strike></li>
             </ul>
       
@@ -205,22 +214,17 @@
               It is possible to achieve AFK farming here if you are sufficiently far along ingame, using the Endurance mode.
             </div>
       
-            <h3 class="mt-2">Creative XP Accolades</h3>
+            <h3 class="mt-2">Creative &amp UEFN Maps</h3>
             <div>
               Creative Mode maps can feature "accolades", in-game events or achievements which reward players with XP. These range from completing obstacle courses, to opponent kills, to simply interacting with hidden map features.
               <br />
               This is lower in the list because the XP awarded varies wildly. You can find videos online advertising "creative xp glitches", but they can be very inconsistent. The game adjusts XP awarded dynamically, based on how fast you're earning, to discourage abusing the mechanic.
               <br />
-              Accolade XP amounts reset each day.
-            </div>
-      
-            <h3 class="mt-2">Impostors Game Mode</h3>
-            <div>
-              A first-person version of Among Us, this game mode consistently awards roughly 5,000-10,000 XP per game, depending how many tasks you complete, how long the game runs for, and whether you win. If you do join this game mode with aim of earning XP rather than actually playing, be courteous to other players and make sure you at least Skip your votes promptly so as not to ruin the game.
+              Newer "UEFN" maps created using the newer unreal engine framework will also grant XP for simply being in-game, although the amounts earned do not appear to be consistent. You will usually get the XP awarded retroactively some tens of minutes (or even hours) after finishing a play session.
               <br />
-              If you remain idle in-game for a set amount of time, you'll be marked as "Idle" and your earned XP will be reduced.
+              Creative XP amounts are capped each day, and the amounts earned will scale down over time. Some accolades will pause earning if the game detects you have not moved around in awhile.
             </div>
-      
+            
             <h3 class="mt-2">General Gameplay</h3>
             <div>
               Opening chests, ammo boxes, freezers, safes, llamas, drops award XP.
@@ -244,9 +248,9 @@
               It's a way for you to skip a day or more of Eat-Sleep-Fortnite (seriously, go outside) and still keep up a bit of your leveling pace.
             </div>
       
-            <h3 class="mt-2"><strike>Creative XP Idle</strike></h3>
+            <h3 class="mt-2"><strike>Impostors Game Mode</strike></h3>
             <div>
-              Idling in Creative Mode no longer earns XP every fifteen minutes.
+              No longer available in-game.
             </div>
       
             <h3 class="mt-2"><strike>Teammate XP Boost</strike></h3>
@@ -263,18 +267,20 @@
       
     </div>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8080880445104035"
-      crossorigin="anonymous"></script>
-    <!-- fortnite-banner-foot -->
-    <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-8080880445104035"
-      data-ad-slot="3043682659"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    <div class="adContainer">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8080880445104035"
+        crossorigin="anonymous"></script>
+      <!-- fortnite-banner-foot -->
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-8080880445104035"
+        data-ad-slot="3043682659"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
 
   </body>
 </html>
