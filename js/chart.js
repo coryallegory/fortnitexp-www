@@ -5,14 +5,14 @@ var myChart = new Chart(ctx, {
     labels: daysDateData,
     datasets: [
       {
-        label: 'Pace to Level 50',
+        label: 'Pace to Level 100',
         backgroundColor: '#0000ff',
         borderColor: '#0000ff',
         data: days50Data,
         fill: false,
       },
       {
-        label: 'Pace to Level 70',
+        label: 'Pace to Level 200',
         backgroundColor: '#ff0000',
         borderColor: '#ff0000',
         data: days70Data,
@@ -35,7 +35,7 @@ var myChart = new Chart(ctx, {
         display: true,
         scaleLabel: {
           display: true,
-          labelString: 'Days Through Chapter 4 Season 5 OG',
+          labelString: 'Days Through Chapter 5 Season 1',
         },
       }],
       yAxes: [{
