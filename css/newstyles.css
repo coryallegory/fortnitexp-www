@@ -76,11 +76,9 @@ a:hover {
 
 /* ASCII Progress Bar */
 .ascii-progress-bar {
-  font-size: clamp(8px, 2.5vw, 20px); /* Responsive font size */
-  line-height: 1;
-  white-space: pre;
-  text-align: center;
-  margin: 0 auto;
+  text-align: center; /* Center the progress bar */
+  margin: 0 auto; /* Center the bar horizontally */
+  white-space: nowrap; /* Prevent wrapping */
 }
 
 .card-container {
