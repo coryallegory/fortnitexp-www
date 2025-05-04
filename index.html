@@ -1,131 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-dark">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Fortnite XP tables and daily leveling rates for grinding season rewards.">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fortnite XP tables and daily leveling rates for grinding season rewards.">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
-    <title>Daily Summary</title>
+  <title>Daily Summary</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/styles.css?v=ch6s02">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/newstyles.css?v=ch6s02">
 
-    <!-- ganalytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR6MYH3TPR"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- ganalytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR6MYH3TPR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      gtag('config', 'G-CR6MYH3TPR');
-    </script>
+    gtag('config', 'G-CR6MYH3TPR');
+  </script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="js/calc.min.js?v=ch6s03"></script>
-    <script src="js/xptable.min.js?v=ch6s03"></script>
-    <script src="js/xp.min.js?v=ch6s03"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="js/calc.min.js?v=ch6s03"></script>
+  <script src="js/xptable.min.js?v=ch6s03"></script>
+  <script src="js/xp.min.js?v=ch6s03"></script>
 
-  </head>
-  <body class="mb-2 px-2 bg-white" style="padding-top: 70px;">
+</head>
+<body>
+  <div class="outer-border">
+    <div class="terminal-border">
+      <nav class="navbar">
+        <a href="index.html">Daily Summary</a>
+        <a href="daily.html">Leveling Pace</a>
+        <a href="levels.html">XP Per Level</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="about.html">About</a>
+      </nav>
 
-    <div id="top"></div>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light fixed-top">
-      <a class="navbar-brand" href="./">FORTNITE XP: C6S3 - Galactic Battle</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup" data-toggle="collapse" data-target=".navbar-collapse">
-        <div class="navbar-nav ml-2">
-          <a class="nav-item nav-link  " href="./">Daily Summary</a>
-          <a class="nav-item nav-link  " href="daily.html">Leveling Pace</a>
-          <a class="nav-item nav-link  " href="levels.html">XP Per Level</a>
-          <a class="nav-item nav-link  " href="calculator.html">Calculator</a>
-          <a class="nav-item nav-link  " href="about.html">About</a>
+      
+      <div class="ascii-title">
+      <pre>
+      ______ ___________ _____ _   _ _____ _____ _____  __   ________ 
+      |  ___|  _  | ___ \_   _| \ | |_   _|_   _|  ___| \ \ / /| ___ \
+      | |_  | | | | |_/ / | | |  \| | | |   | | | |__    \ V / | |_/ /
+      |  _| | | | |    /  | | | . ` | | |   | | |  __|   /   \ |  __/ 
+      | |   \ \_/ / |\ \  | | | |\  |_| |_  | | | |___  / /^\ \| |    
+      \_|    \___/\_| \_| \_/ \_| \_/\___/  \_/ \____/  \/   \/\_|    
+      </pre>
+      </div>
+      
+      <div class="hero">
+        <p>Chapter 6, Season 3: Galactic Battle runs May 2, 2025 until June 7, 2025 @ 2:00pm ET.</p>
+        <p>There are currently <span id="daysRemaining">0</span>/36 Days Remaining. We're <span id="percentageFinished">0</span>% there.</p>
+      </div>
+      <div class="ascii-progress-bar">
+        ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+      </div>
+      
+      <div class="card-container">
+        <div id="50card" class="card">
+          <div>Battle Pass</div>
+          <div>50 Levels</div>
+          <img class="rewardImage" src="img/lvl50.png" alt="Level 50 Reward">
+          <div>Today's Pace:</div>
+          <div class="highlight">Level 4</div>
+        </div>
+      
+        <div id="70card" class="card">
+          <div>Bonus Rewards</div>
+          <div>70 Levels</div>
+          <img class="rewardImage" src="img/lvl70.png" alt="Level 70 Reward">
+          <div>Today's Pace:</div>
+          <div class="highlight">Level 7</div>
         </div>
       </div>
-    </nav>
-
-
-    <div id="content" class="pb-2 px-2">
-
-      <h1 class="titleBlock">Daily Summary</h1>
-
       
-            <div id="summary" class="mb-3">
-              Chapter 6, Season 3: Galactic Battle runs May 2, 2025 until June 7, 2025 @ 2:00pm ET.
-              <br />
-              There are currently 
-            </div>
-      
-            <div id="100card" class="card d-inline-block mb-4">
-              <div class="card-header pt-1">
-                <p class="card-title text-nowrap font-weight-bold text-center mb-1">Battle Pass Rewards</p>
-                <div>
-                  <p class="card-subtitle text-muted text-center">Level 100</p>
-                </div>
-                <div class="text-center">
-                  <img class="rewardImage img-thumbnail" src="img/100reward-ch6s3.jpg">
-                </div>
-              </div>
-              <div class="card-body py-1">
-                <p class="card-text text-center mb-1">
-                  Today's Pace:
-                </p>
-                <p class="card-text text-center bg-warning font-weight-bold">
-                  Level <span id="target100level"></span>
-                </p>
-              </div>
-            </div>
-            <div id="200card" class="card d-inline-block mb-4 ml-2">
-              <div class="card-header pt-1">
-                <p class="card-title text-nowrap font-weight-bold text-center mb-1">Bonus Rewards</p>
-                <div>
-                  <p class="card-subtitle text-muted text-center">Level 200</p>
-                </div>
-                <div class="text-center">
-                  <img class="rewardImage img-thumbnail" src="img/200reward-unknown.jpg">
-                </div>
-              </div>
-              <div class="card-body py-1">
-                <p class="card-text text-center mb-1">
-                  Today's Pace:
-                </p>
-                <p class="card-text text-center bg-warning font-weight-bold">
-                  Level <span id="target200level"></span>
-                </p>
-              </div>
-            </div>
-            
-            <script>populateSummary();populateDaysTable();</script>
-           
-      
-    </div>
-
-    <div class="adContainer bg-dark mb-4 mx-n2 px-2 py-2">
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8080880445104035"
-        crossorigin="anonymous"></script>
-      <!-- fortnite-banner-foot -->
-      <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-8080880445104035"
-        data-ad-slot="3043682659"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
       <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+        updateSummary();
       </script>
-    </div>
+      
 
-  </body>
+    </div>
+  </div>
+</body>
 </html>

@@ -1,154 +1,101 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-dark">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Fortnite XP tables and daily leveling rates for grinding season rewards.">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fortnite XP tables and daily leveling rates for grinding season rewards.">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
-    <title>Fortnite XP Calculator</title>
+  <title>Fortnite XP Calculator</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/styles.css?v=ch6s02">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/newstyles.css?v=ch6s02">
 
-    <!-- ganalytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR6MYH3TPR"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- ganalytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR6MYH3TPR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      gtag('config', 'G-CR6MYH3TPR');
-    </script>
+    gtag('config', 'G-CR6MYH3TPR');
+  </script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="js/calc.min.js?v=ch6s03"></script>
-    <script src="js/xptable.min.js?v=ch6s03"></script>
-    <script src="js/xp.min.js?v=ch6s03"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="js/calc.min.js?v=ch6s03"></script>
+  <script src="js/xptable.min.js?v=ch6s03"></script>
+  <script src="js/xp.min.js?v=ch6s03"></script>
 
-  </head>
-  <body class="mb-2 px-2 bg-white" style="padding-top: 70px;">
-
-    <div id="top"></div>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light fixed-top">
-      <a class="navbar-brand" href="./">FORTNITE XP: C6S3 - Galactic Battle</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup" data-toggle="collapse" data-target=".navbar-collapse">
-        <div class="navbar-nav ml-2">
-          <a class="nav-item nav-link  " href="./">Daily Summary</a>
-          <a class="nav-item nav-link  " href="daily.html">Leveling Pace</a>
-          <a class="nav-item nav-link  " href="levels.html">XP Per Level</a>
-          <a class="nav-item nav-link active " href="calculator.html">Calculator</a>
-          <a class="nav-item nav-link  " href="about.html">About</a>
-        </div>
-      </div>
-    </nav>
-
-
-    <div id="content" class="pb-2 px-2">
-
-      <h1 class="titleBlock">Fortnite XP Calculator</h1>
+</head>
+<body>
+  <div class="outer-border">
+    <div class="terminal-border">
+      <nav class="navbar">
+        <a href="index.html">Daily Summary</a>
+        <a href="daily.html">Leveling Pace</a>
+        <a href="levels.html">XP Per Level</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="about.html">About</a>
+      </nav>
 
       
-        <form class="mb-4">
+      <p>
+        Use this calculator to estimate how much XP you need to reach your desired level in Fortnite this season.
+      </p>
       
-          <div class="form-row">
-            <div class="form-group col-4 col-md-1">
-              <label for="inputCurrentLevel">Current Level:</label>
-              <input type="number" class="form-control" id="inputCurrentLevel" value="1" onchange="calculate(this)">
+      <div class="calculator-container">
+        <form id="xpCalculator">
+          <div class="custom-form-row">
+            <div class="custom-form-group">
+              <label for="currentLevel">Current Level:</label>
+              <input type="number" id="currentLevel" name="currentLevel" min="1" max="1000" value="1" required>
             </div>
-            <div class="form-group col-4 col-md-1 text-center">
-              <label>&nbsp;</label>
-              <div style="font-size: 1.5rem;">➔</div>
-            </div>
-            <div class="form-group col-4 col-md-1">
-              <label for="inputTargetLevel">Target Level:</label>
-              <input type="number" class="form-control" id="inputTargetLevel" value="200" onchange="calculate(this)">
+      
+            <div class="custom-form-group">
+              <label for="desiredLevel">Desired Level:</label>
+              <input type="number" id="desiredLevel" name="desiredLevel" min="1" max="1000" value="70" required>
             </div>
           </div>
       
-          <p class="font-italic">
-            Calculate XP required daily to reach your target level. It will also tell you how many days early you'll finish (the number of days you can skip your grind).
-          </p>
-          <p class="font-italic">
-            Note that the following playtime and daily XP caps can be changed arbitrarily by Epic. Consult <a href="https://www.reddit.com/r/FortniteXPMaps/">/r/FortniteXPMaps</a> for up-to-date discussion.
-          </p>
-      
-          <div class="form-row align-items-center mb-2">
-            <div class="form-check mr-2">
-              <input class="form-check-input" type="checkbox" value="" id="checkGlobalDailyXP" onchange="toggleInput(this, 'inputGlobalDailyXP'); calculate(this)">
-              <label class="form-check-label" for="checkGlobalDailyXP">
-                3x Global Daily Goals (3x 1k + 3x 30k):
-              </label>
-            </div>
-            <input type="number" class="form-control col-md-1" id="inputGlobalDailyXP" value="93000" onchange="calculate(this)" disabled>
-          </div>
-          <div class="form-row align-items-center mb-2">
-            <div class="form-check mr-2">
-              <input class="form-check-input" type="checkbox" value="" id="checkCreativeXP" onchange="toggleInput(this, 'inputCreativeXP'); calculate(this)">
-              <label class="form-check-label" for="checkCreativeXP">
-                Daily Creative XP:
-              </label>
-            </div>
-            <input type="number" class="form-control col-md-1" id="inputCreativeXP" value="0" onchange="calculate(this)" disabled>
-          </div>
-          <div class="form-row align-items-center mb-2">
-            <div class="form-check mr-2">
-              <input class="form-check-input" type="checkbox" value="" id="checkSTWXP" onchange="toggleInput(this, 'inputSTWXP'); calculate(this)">
-              <label class="form-check-label" for="checkSTWXP">
-                Daily Save The World XP Capped:
-              </label>
-            </div>
-            <input type="number" class="form-control col-md-1" id="inputSTWXP" value="0" onchange="calculate(this)" disabled>
-          </div>
-          <div class="form-row align-items-center mb-2">
-            <div class="form-check mr-2">
-              <input class="form-check-input" type="checkbox" value="" id="checkOtherXP" onchange="toggleInput(this, 'inputOtherXP'); calculate(this)">
-              <label class="form-check-label" for="checkOtherXP">
-                Other ingame or quest XP to be earned per day:
-              </label>
-            </div>
-            <input type="number" class="form-control col-md-1" id="inputOtherXP" value="0" onchange="calculate(this)" disabled>
+          <div class="custom-form-group">
+            <label class="inline-label" for="globalDailyGoalCheckbox">
+              <input type="checkbox" id="globalDailyGoalCheckbox">
+              3x Global Daily Goals (3x 1k + 3x 30k):
+            </label>
+            <input type="number" id="globalDailyGoal" name="globalDailyGoal" value="93000" readonly disabled>
           </div>
       
+          <div class="custom-form-group">
+            <label for="creativeXp">Daily Creative XP:</label>
+            <input type="number" id="creativeXp" name="creativeXp" min="0" placeholder="0">
+          </div>
+      
+          <div class="custom-form-group">
+            <label for="stwXp">Save the World XP:</label>
+            <input type="number" id="stwXp" name="stwXp" min="0" placeholder="0">
+          </div>
+      
+          <div class="custom-form-group">
+            <label for="otherXp">Other XP:</label>
+            <input type="number" id="otherXp" name="otherXp" min="0" placeholder="0">
+          </div>
+      
+          <button type="button" id="calculateButton">Calculate</button>
         </form>
       
-        <div id="results" class="card m-2 p-2 bg-dark text-light">
-          <span id="xpRemainingPerDay" class="text-warning font-weight-bold"></span>
-          <div class="mt-2" id="moredata"></div>
+        <div id="calculatorResults" class="results-container">
+          <p>Enter your details above and click "Calculate" to see your results.</p>
         </div>
-        
-        <script>calculate();</script>
+      </div>
       
-      
-    </div>
 
-    <div class="adContainer bg-dark mb-4 mx-n2 px-2 py-2">
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8080880445104035"
-        crossorigin="anonymous"></script>
-      <!-- fortnite-banner-foot -->
-      <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-8080880445104035"
-        data-ad-slot="3043682659"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
     </div>
-
-  </body>
+  </div>
+</body>
 </html>

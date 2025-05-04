@@ -1,0 +1,350 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background: #000000; /* Black background */
+  color: #00ff00; /* Green text */
+  text-shadow: 0 0 2px #00ff00, 0 0 4px #00ff00; /* Green glow */
+}
+
+.outer-border {
+  border: 2px solid #808080; /* Grey border */
+  padding: 1rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.terminal-border {
+  border: 4px solid #00ff00; /* Green border */
+  border-radius: 15px;
+  padding: 1rem;
+  background: radial-gradient(circle, #003300, #000000 80%);
+}
+
+/* Navbar Styling */
+.navbar {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.navbar a {
+  white-space: nowrap; /* Prevent text wrapping */
+  margin: 0 0.5rem; /* Add spacing between links */
+  color: #00ccff; /* Blue links */
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #00ffff; /* Lighter blue on hover */
+}
+
+/* Universal link styling */
+a {
+  color: #00ccff; /* Blue color for links */
+  text-decoration: none;
+}
+
+a:before,
+a:after {
+  content: '['; /* Add square brackets before and after */
+  margin-right: 0.2rem;
+}
+
+a:after {
+  content: ']';
+  margin-left: 0.2rem;
+}
+
+a:hover {
+  color: #00ffff; /* Lighter blue on hover */
+}
+
+/* ASCII Title */
+.ascii-title {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for ASCII art */
+  margin-bottom: 1rem;
+}
+
+.ascii-title pre {
+  font-size: clamp(6px, 2vw, 16px); /* Responsive font size */
+  line-height: 1; /* Consistent line spacing */
+  white-space: pre; /* Preserve alignment */
+  text-align: center;
+  margin: 0 auto 1rem;
+}
+
+/* ASCII Progress Bar */
+.ascii-progress-bar {
+  font-size: clamp(8px, 2.5vw, 20px); /* Responsive font size */
+  line-height: 1;
+  white-space: pre;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  gap: 2rem; /* Add spacing between the cards */
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: transparent; /* Remove card background */
+  padding: 1rem;
+  text-align: center;
+}
+
+.card img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* General styling for all text inside cards */
+.card div {
+  font-size: 1rem;
+  color: #00ff00; /* Green text color */
+  text-align: center;
+  margin: 0.25rem 0; /* Add spacing between elements */
+}
+
+/* Styling for the highlight text */
+.card .highlight {
+  color: red; /* Highlight "Level X" in red */
+  font-weight: bold; /* Make the text bold */
+  font-size: 1.1rem; /* Slightly larger font size for emphasis */
+  text-shadow: none; /* Remove the green glow (text shadow) */
+  margin-top: 1rem;
+}
+
+.hero {
+  text-align: center; /* Center all elements in the hero section */
+  margin-bottom: 1rem;
+}
+
+/* Table styling */
+.xp-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #00ff00; /* Green text color */
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+}
+
+.xp-table th,
+.xp-table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid #00ff00; /* Green border for table cells */
+}
+
+.xp-table th {
+  background-color: #003300; /* Darker green background for headers */
+  text-align: center;
+}
+
+.xp-table tr:nth-child(even) {
+  background-color: #002200; /* Slightly lighter green for even rows */
+}
+
+.xp-table tr:nth-child(odd) {
+  background-color: #001a00; /* Darker green for odd rows */
+}
+
+.xp-table tr:hover {
+  background-color: #004400; /* Highlight row on hover */
+  cursor: pointer;
+}
+
+/* Ensure the calculator container has proper padding and width */
+.calculator-container {
+  margin: 2rem auto;
+  max-width: 600px; /* Limit the width of the container */
+  padding: 1rem; /* Add padding inside the container */
+  border: 2px solid #00ff00; /* Green border around the calculator */
+  border-radius: 8px;
+  background-color: #001a00; /* Dark background for the calculator */
+  color: #00ff00; /* Green text color */
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Custom form row styling */
+.custom-form-row {
+  display: flex;
+  justify-content: space-between; /* Space out the form groups */
+  gap: 1rem; /* Add spacing between the two fields */
+  flex-wrap: wrap; /* Allow fields to wrap on smaller screens */
+}
+
+/* Ensure form groups take up equal space */
+.custom-form-row .custom-form-group {
+  flex: 1; /* Ensure both fields take equal width */
+  min-width: 0; /* Prevent overflow issues */
+}
+
+/* General form group styling */
+.custom-form-group {
+  margin-bottom: 1rem;
+}
+
+/* Ensure the checkbox and text are inline */
+.custom-form-group label {
+  display: inline-flex; /* Align checkbox and text inline */
+  align-items: center; /* Vertically align the checkbox and text */
+  gap: 0.5rem; /* Add spacing between the checkbox and text */
+}
+
+/* Label styling */
+.custom-form-group label {
+  display: flex; /* Use flexbox to align checkbox and label text */
+  align-items: center; /* Vertically center the checkbox and text */
+  gap: 0.5rem; /* Add spacing between the checkbox and label text */
+}
+
+/* General styling for all input fields */
+.custom-form-group input {
+  width: 100%; /* Ensure inputs fill their container */
+  padding: 0.5rem;
+  border: 1px solid #00ff00; /* Green border */
+  border-radius: 4px;
+  background-color: #000000; /* Black background */
+  color: #00ff00; /* Green text color */
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box; /* Include padding in width calculation */
+  text-align: center; /* Center-align text */
+}
+
+/* Style for disabled input fields */
+.custom-form-group input:disabled {
+  background-color: #333333; /* Dark grey background for disabled state */
+  color: #777777; /* Light grey text for disabled state */
+  border-color: #555555; /* Grey border for disabled state */
+  cursor: not-allowed; /* Show "not allowed" cursor */
+}
+
+/* Style for checkboxes */
+.custom-form-group input[type="checkbox"] {
+  margin: 0; /* Remove default margin for checkboxes */
+  margin-right: 0.5rem; /* Add spacing between checkbox and label */
+}
+
+/* Input focus styling */
+.custom-form-group input:focus {
+  outline: none;
+  border-color: #00ffff; /* Lighter green border on focus */
+}
+
+/* Button styling */
+button#calculateButton {
+  display: block;
+  width: 100%; /* Full-width button */
+  padding: 0.75rem;
+  border: 2px solid #00ff00; /* Green border for button */
+  border-radius: 4px;
+  background-color: #003300; /* Dark green background for button */
+  color: #00ff00; /* Green text color */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button#calculateButton:hover {
+  background-color: #004400; /* Lighter green background on hover */
+  border-color: #00ffff; /* Lighter green border on hover */
+}
+
+/* Results container styling */
+.results-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #00ff00; /* Green border for results */
+  border-radius: 4px;
+  background-color: #000000; /* Black background for results */
+  color: #00ff00; /* Green text color */
+}
+
+/* Style for static value fields (e.g., Global Daily Goals) */
+.static-value {
+  display: inline-block;
+  padding: 0.5rem;
+  border: 1px solid #00ff00; /* Green border for active state */
+  border-radius: 4px;
+  background-color: #000000; /* Black background */
+  color: #00ff00; /* Green text color */
+  font-family: 'Courier New', Courier, monospace;
+  min-width: 100px; /* Ensure consistent width */
+  text-align: center; /* Center-align the text */
+  margin-left: 1rem; /* Add spacing between the label and the value */
+}
+
+/* Style for the static value field */
+.static-value {
+  width: 100px;
+  padding: 0.5rem;
+  border: 1px solid #00ff00; /* Green border for active state */
+  border-radius: 4px;
+  background-color: #000000; /* Black background */
+  color: #00ff00; /* Green text color */
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+  /*margin-left: 1rem; /* Add spacing between the input and the label */
+}
+
+/* Style for disabled input fields */
+.static-value:disabled {
+  background-color: #333333; /* Dark grey background for disabled state */
+  color: #777777; /* Light grey text for disabled state */
+  border-color: #555555; /* Grey border for disabled state */
+  cursor: not-allowed; /* Show "not allowed" cursor */
+}
+
+/* Style for disabled input fields */
+.static-value.disabled {
+  background-color: #333333; /* Dark grey background for disabled state */
+  color: #777777; /* Light grey text for disabled state */
+  border-color: #555555; /* Grey border for disabled state */
+  cursor: not-allowed; /* Show "not allowed" cursor */
+}
+
+/* Ensure the label and checkbox are inline and properly aligned */
+.inline-label {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align the checkbox and text */
+  gap: 0.5rem; /* Add spacing between the checkbox and text */
+  width: 100%; /* Allow the label to take up the full width */
+}
+
+/* Prevent the checkbox from growing */
+.inline-label input[type="checkbox"] {
+  flex: 0; /* Do not allow the checkbox to grow */
+  margin: 0; /* Remove default margins */
+}
+
+/* Allow the text to take up the remaining space */
+.inline-label::after {
+  content: ''; /* Optional: Add a spacer if needed */
+  flex: 1; /* Allow the text to take up the remaining space */
+}
+
+/* Remove unnecessary spacing around the checkbox */
+.inline-label input[type="checkbox"] {
+  margin: 0; /* Remove default margins */
+}
+
+/* Checkbox and label alignment */
+.inline-label {
+  display: inline-flex; /* Align checkbox and text inline */
+  align-items: center; /* Vertically align the checkbox and text */
+  gap: 0.5rem; /* Add spacing between the checkbox and text */
+}
+
+/* Ensure the checkbox and text are inline */
+.chkbox {
+  display: inline; /* Keep the label inline with the checkbox */
+  margin-left: 0.5rem; /* Add spacing between the checkbox and text */
+  cursor: pointer; /* Change cursor to pointer for better UX */
+}
