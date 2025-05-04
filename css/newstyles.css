@@ -74,13 +74,6 @@ a:hover {
   margin: 0 auto 1rem;
 }
 
-/* ASCII Progress Bar */
-.ascii-progress-bar {
-  text-align: center; /* Center the progress bar */
-  margin: 0 auto; /* Center the bar horizontally */
-  white-space: nowrap; /* Prevent wrapping */
-}
-
 .card-container {
   display: flex;
   justify-content: center; /* Center the cards horizontally */
@@ -353,4 +346,27 @@ button#calculateButton:hover {
   display: inline; /* Keep the label inline with the checkbox */
   margin-left: 0.5rem; /* Add spacing between the checkbox and text */
   cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+/* Progress bar container */
+.progress-container {
+  max-width: 300px; /* Default maximum width */
+  height: 1em;
+  margin: 0 auto; /* Center the container horizontally */
+  background: repeating-linear-gradient(
+    90deg, /* Horizontal direction */
+    #00ff0067 0, /* Dot color */
+    #00ff0067 2px, /* Dot size */
+    transparent 2px, /* Space after dot */
+    transparent 6px /* Space between dots */
+  );
+}
+
+/* Progress bar itself */
+.progress-bar {
+  height: 100%; /* Fill the height of the container */
+  background-color: #00ff00; /* Bright green for the progress */
+  width: 0%; /* Default width (set dynamically via inline style or JavaScript) */
+  transition: width 0.3s ease; /* Smooth transition for width changes */
+  box-shadow: 0 0 2px #00ff00, 0 0 4px #00ff00; /* Add green glow effect */
 }
