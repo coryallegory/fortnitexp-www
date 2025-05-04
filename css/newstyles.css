@@ -158,6 +158,14 @@ a:hover {
   cursor: pointer;
 }
 
+/* Highlight today's row in the table */
+.today-row {
+  background-color: #003300 !important; /* Match the header row background */
+  color: #ffffff; /* White text */
+  font-weight: bold;
+  text-shadow: none;
+}
+
 /* Ensure the calculator container has proper padding and width */
 .calculator-container {
   margin: 2rem auto;
