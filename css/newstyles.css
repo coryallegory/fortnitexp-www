@@ -189,22 +189,8 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-/* Ensure the checkbox and text are inline */
-.custom-form-group label {
-  display: inline-flex; /* Align checkbox and text inline */
-  align-items: center; /* Vertically align the checkbox and text */
-  gap: 0.5rem; /* Add spacing between the checkbox and text */
-}
-
-/* Label styling */
-.custom-form-group label {
-  display: flex; /* Use flexbox to align checkbox and label text */
-  align-items: center; /* Vertically center the checkbox and text */
-  gap: 0.5rem; /* Add spacing between the checkbox and label text */
-}
-
 /* General styling for all input fields */
-.custom-form-group input {
+.custom-form-group input:not([type="checkbox"]) {
   width: 100%; /* Ensure inputs fill their container */
   padding: 0.5rem;
   border: 1px solid #00ff00; /* Green border */
@@ -224,16 +210,29 @@ a:hover {
   cursor: not-allowed; /* Show "not allowed" cursor */
 }
 
-/* Style for checkboxes */
-.custom-form-group input[type="checkbox"] {
-  margin: 0; /* Remove default margin for checkboxes */
-  margin-right: 0.5rem; /* Add spacing between checkbox and label */
-}
-
 /* Input focus styling */
 .custom-form-group input:focus {
   outline: none;
   border-color: #00ffff; /* Lighter green border on focus */
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  flex-shrink: 0;
+  margin: 0;
+  margin-top: 0.2rem; /* aligns checkbox visually with first line of label */
+}
+
+.checkbox-wrapper label {
+  flex-grow: 1;
+  line-height: 1.2;
+  margin: 0;
 }
 
 /* Button styling */
@@ -263,89 +262,6 @@ button#calculateButton:hover {
   border-radius: 4px;
   background-color: #000000; /* Black background for results */
   color: #00ff00; /* Green text color */
-}
-
-/* Style for static value fields (e.g., Global Daily Goals) */
-.static-value {
-  display: inline-block;
-  padding: 0.5rem;
-  border: 1px solid #00ff00; /* Green border for active state */
-  border-radius: 4px;
-  background-color: #000000; /* Black background */
-  color: #00ff00; /* Green text color */
-  font-family: 'Courier New', Courier, monospace;
-  min-width: 100px; /* Ensure consistent width */
-  text-align: center; /* Center-align the text */
-  margin-left: 1rem; /* Add spacing between the label and the value */
-}
-
-/* Style for the static value field */
-.static-value {
-  width: 100px;
-  padding: 0.5rem;
-  border: 1px solid #00ff00; /* Green border for active state */
-  border-radius: 4px;
-  background-color: #000000; /* Black background */
-  color: #00ff00; /* Green text color */
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  box-sizing: border-box;
-  /*margin-left: 1rem; /* Add spacing between the input and the label */
-}
-
-/* Style for disabled input fields */
-.static-value:disabled {
-  background-color: #333333; /* Dark grey background for disabled state */
-  color: #777777; /* Light grey text for disabled state */
-  border-color: #555555; /* Grey border for disabled state */
-  cursor: not-allowed; /* Show "not allowed" cursor */
-}
-
-/* Style for disabled input fields */
-.static-value.disabled {
-  background-color: #333333; /* Dark grey background for disabled state */
-  color: #777777; /* Light grey text for disabled state */
-  border-color: #555555; /* Grey border for disabled state */
-  cursor: not-allowed; /* Show "not allowed" cursor */
-}
-
-/* Ensure the label and checkbox are inline and properly aligned */
-.inline-label {
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Vertically align the checkbox and text */
-  gap: 0.5rem; /* Add spacing between the checkbox and text */
-  width: 100%; /* Allow the label to take up the full width */
-}
-
-/* Prevent the checkbox from growing */
-.inline-label input[type="checkbox"] {
-  flex: 0; /* Do not allow the checkbox to grow */
-  margin: 0; /* Remove default margins */
-}
-
-/* Allow the text to take up the remaining space */
-.inline-label::after {
-  content: ''; /* Optional: Add a spacer if needed */
-  flex: 1; /* Allow the text to take up the remaining space */
-}
-
-/* Remove unnecessary spacing around the checkbox */
-.inline-label input[type="checkbox"] {
-  margin: 0; /* Remove default margins */
-}
-
-/* Checkbox and label alignment */
-.inline-label {
-  display: inline-flex; /* Align checkbox and text inline */
-  align-items: center; /* Vertically align the checkbox and text */
-  gap: 0.5rem; /* Add spacing between the checkbox and text */
-}
-
-/* Ensure the checkbox and text are inline */
-.chkbox {
-  display: inline; /* Keep the label inline with the checkbox */
-  margin-left: 0.5rem; /* Add spacing between the checkbox and text */
-  cursor: pointer; /* Change cursor to pointer for better UX */
 }
 
 /* Progress bar container */
