@@ -103,7 +103,7 @@ a:hover {
 
 /* Styling for the highlight text */
 .card .highlight {
-  color: red; /* Highlight "Level X" in red */
+  color: whitesmoke;
   font-weight: bold; /* Make the text bold */
   font-size: 1rem; /* Slightly larger font size for emphasis */
   text-shadow: none; /* Remove the green glow (text shadow) */
