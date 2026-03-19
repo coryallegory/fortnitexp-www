@@ -772,6 +772,7 @@ button#calculateButton:focus-visible {
 }
 
 .ad-dock {
+    display: none;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
