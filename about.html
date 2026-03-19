@@ -11,12 +11,15 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#0b0d12">
 
   <title>About</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/newstyles.css?v=ch7s01">
+  <link rel="stylesheet" href="css/newstyles.css?v=ch7s02">
 
   <!-- ganalytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR6MYH3TPR"></script>
@@ -28,61 +31,72 @@
     gtag('config', 'G-CR6MYH3TPR');
   </script>
 
-  <script src="js/calc.min.js?v=ch7s01-2"></script>
-  <script src="js/xptable.min.js?v=ch7s01-2"></script>
-  <script src="js/xp.min.js?v=ch7s01-2"></script>
+  <script src="js/calc.min.js?v=ch7s02"></script>
+  <script src="js/xptable.min.js?v=ch7s02"></script>
+  <script src="js/xp.min.js?v=ch7s02"></script>
 
 </head>
 <body>
-  <div class="outer-border">
-    <div class="terminal-border">
-      <nav class="navbar">
-        <a href="index.html">Daily Summary</a>
-        <a href="daily.html">Leveling Pace</a>
-        <a href="levels.html">XP Per Level</a>
-        <a href="calculator.html">Calculator</a>
-        <a href="about.html">About</a>
-      </nav>
+  <div class="page-shell">
+    <div class="page-glow"></div>
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="site-brand" href="index.html" aria-label="FORTNITEXP home">
+          <span class="site-brand-mark">F/XP</span>
+          <span class="site-brand-copy">
+            <span class="site-brand-title">FORTNITE XP</span>
+            <span class="site-brand-subtitle">season pacing // updated daily</span>
+          </span>
+        </a>
 
+        <nav class="navbar" aria-label="Primary">
+          <a class="" href="index.html">Daily Summary</a>
+          <a class="" href="daily.html">Leveling Pace</a>
+          <a class="" href="levels.html">XP Per Level</a>
+          <a class="" href="calculator.html">Calculator</a>
+          <a class="is-active" href="about.html">About</a>
+        </nav>
+      </header>
 
-<p>
-  There once was a family of sweats looking for an easy-to-read (and easy-to-find!) web resource which laid out Fortnite's XP progression and leveling rates. They didn't find what they wanted, so they made it themselves. Perhaps other people out there find it useful as well.
-</p>
-<p>
-  If you notice any issues, feel free to send a message or tag me on 
-  <a href="https://www.reddit.com/user/coryallegory/">Reddit</a> or 
-  <a href="https://twitter.com/coryallegory">Twitter</a>.
-  The plan is to keep this website updated as the Fortnite seasons roll over.
-</p>
-<p>
-  Happy Hunting!
-</p>
-<p class="mt-4">
-  <i>And big thanks for help from the following kind folks:</i>
-</p>
-<p>
-  <i>
-    <a href="https://twitter.com/HYPEX">@HYPEX</a><br />
-    <a href="https://twitter.com/iFireMonkey/">@iFireMonkey</a><br />
-    <a href="https://twitter.com/ShiinaBR">@Shiina</a><br />
-    /u/samm7891<br />
-    /u/CrimsonCoast<br />
-    /u/25_MODULAR_TERMINALS<br />
-    /u/Splendidissimus<br />
-    /u/Thready704<br />
-    community at <a href="https://www.reddit.com/r/FortniteXPMaps/">/r/FortniteXPMaps/</a><br />
-    /u/Tuziest<br />
-    <a href="https://twitter.com/c_storm_">@c_storm_</a><br />
-    /u/Harlow_Quinzel<br />
-    <a href="https://x.com/rickmastfan67">@rickmastfan67</a><br />
-  </i>
-</p>
+      <main class="page-content">
 
+<section class="content-panel">
+  <div class="panel-header">
+    <div class="panel-title">About the site</div>
+    <p class="panel-intro">There once was a family of sweats looking for an easy-to-read (and easy-to-find!) web resource laying out Fortnite's XP progression and leveling rates. They didn't find what they wanted, so they made it themselves. Perhaps other people out there find it useful as well.</p>
+  </div>
 
+  <div class="about-copy">
+    <p>If you notice any issues, feel free to send a message or tag me on <a class="inline-link" href="https://www.reddit.com/user/coryallegory/">Reddit</a> or <a class="inline-link" href="https://twitter.com/coryallegory">Twitter</a>. The plan is to keep this website updated as the Fortnite seasons roll over.</p>
+    <p>Happy hunting.</p>
+    <p></p>
+    <p>And big thanks for help from the following kind folks:</p>
+  </div>
+
+  <div class="link-list">
+    <a class="inline-link" href="https://twitter.com/HYPEX">@HYPEX</a>
+    <a class="inline-link" href="https://twitter.com/iFireMonkey/">@iFireMonkey</a>
+    <a class="inline-link" href="https://twitter.com/ShiinaBR">@Shiina</a>
+    <span>/u/samm7891</span>
+    <span>/u/CrimsonCoast</span>
+    <span>/u/25_MODULAR_TERMINALS</span>
+    <span>/u/Splendidissimus</span>
+    <span>/u/Thready704</span>
+    <span>community at <a class="inline-link" href="https://www.reddit.com/r/FortniteXPMaps/">/r/FortniteXPMaps/</a></span>
+    <span>/u/Tuziest</span>
+    <a class="inline-link" href="https://twitter.com/c_storm_">@c_storm_</a>
+    <span>/u/Harlow_Quinzel</span>
+    <a class="inline-link" href="https://x.com/rickmastfan67">@rickmastfan67</a>
+  </div>
+</section>
+
+      </main>
     </div>
   </div>
-  
-  <br />
+
+  <div class="ad-dock" aria-label="Advertisement">
+    <div class="ad-shell">
+      <p class="ad-label">Sponsored</p>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8080880445104035"
      crossorigin="anonymous"></script>
@@ -96,6 +110,8 @@
   <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
+    </div>
+  </div>
 
 </body>
 </html>

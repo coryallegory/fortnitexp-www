@@ -11,12 +11,15 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#0b0d12">
 
   <title>Fortnite XP Per Level</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/newstyles.css?v=ch7s01">
+  <link rel="stylesheet" href="css/newstyles.css?v=ch7s02">
 
   <!-- ganalytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR6MYH3TPR"></script>
@@ -28,37 +31,54 @@
     gtag('config', 'G-CR6MYH3TPR');
   </script>
 
-  <script src="js/calc.min.js?v=ch7s01-2"></script>
-  <script src="js/xptable.min.js?v=ch7s01-2"></script>
-  <script src="js/xp.min.js?v=ch7s01-2"></script>
+  <script src="js/calc.min.js?v=ch7s02"></script>
+  <script src="js/xptable.min.js?v=ch7s02"></script>
+  <script src="js/xp.min.js?v=ch7s02"></script>
 
 </head>
 <body>
-  <div class="outer-border">
-    <div class="terminal-border">
-      <nav class="navbar">
-        <a href="index.html">Daily Summary</a>
-        <a href="daily.html">Leveling Pace</a>
-        <a href="levels.html">XP Per Level</a>
-        <a href="calculator.html">Calculator</a>
-        <a href="about.html">About</a>
-      </nav>
+  <div class="page-shell">
+    <div class="page-glow"></div>
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="site-brand" href="index.html" aria-label="FORTNITEXP home">
+          <span class="site-brand-mark">F/XP</span>
+          <span class="site-brand-copy">
+            <span class="site-brand-title">FORTNITE XP</span>
+            <span class="site-brand-subtitle">season pacing // updated daily</span>
+          </span>
+        </a>
 
+        <nav class="navbar" aria-label="Primary">
+          <a class="" href="index.html">Daily Summary</a>
+          <a class="" href="daily.html">Leveling Pace</a>
+          <a class="is-active" href="levels.html">XP Per Level</a>
+          <a class="" href="calculator.html">Calculator</a>
+          <a class="" href="about.html">About</a>
+        </nav>
+      </header>
 
-<p>
-  Full table of experience points required to advance between each Fortnite level this season.
-</p>
+      <main class="page-content">
 
-<table id="xpTable" class="xp-table">
-  <thead>
-    <tr>
-      <th scope="col">Level</th>
-      <th scope="col">XP to Reach</th>
-      <th scope="col">XP Total</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+<section class="content-panel">
+  <div class="panel-header">
+    <div class="panel-title">XP per level</div>
+    <p class="panel-intro">Full table of experience points required to advance between each Fortnite level this season.</p>
+  </div>
+
+  <div class="table-scroll">
+    <table id="xpTable" class="xp-table">
+      <thead>
+        <tr>
+          <th scope="col">Level</th>
+          <th scope="col">XP to Reach</th>
+          <th scope="col">XP Total</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -66,11 +86,13 @@
   });
 </script>
 
-
+      </main>
     </div>
   </div>
-  
-  <br />
+
+  <div class="ad-dock" aria-label="Advertisement">
+    <div class="ad-shell">
+      <p class="ad-label">Sponsored</p>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8080880445104035"
      crossorigin="anonymous"></script>
@@ -84,6 +106,8 @@
   <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
+    </div>
+  </div>
 
 </body>
 </html>
